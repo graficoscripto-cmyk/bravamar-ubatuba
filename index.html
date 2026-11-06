@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bravamar · Passeios de lancha em Ubatuba</title>
+<meta name="description" content="Passeio de lancha em Ubatuba com a Bravamar: lancha nova, equipe atenciosa, praias de água calma e churrasco a bordo. Nota 5,0 no Google.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0b3a34">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bravamar · Passeios de lancha em Ubatuba">
+<meta property="og:description" content="Lancha nova, praias de água calma e churrasco a bordo. 5,0 ★ no Google.">
+<meta property="og:image" content="img/og-bravamar-v1.jpg">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Kaushan+Script&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0b3a34;--g2:#12544a;--sea:#1f9a8c;--sand:#f3ebdd;--teak:#d6803e;--ink:#10231f;--r:22px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.55 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--sand);overflow-x:hidden}
+img{display:block;max-width:100%}
+.wrap{padding:0 20px;max-width:1100px;margin:0 auto}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;letter-spacing:-.02em}
+.script{font-family:'Kaushan Script',cursive;font-weight:400}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;transition:transform .35s ease;color:#fff}
+nav.hide{transform:translateY(-110%)}
+nav .logo{font-size:28px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;font-weight:600;border-radius:999px;padding:13px 22px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25);border:0;font-size:16px;font-family:inherit}
+.btn.s{padding:9px 16px;font-size:14px}
+.btn svg{width:20px;height:20px;fill:#fff}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--g)}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.hero img{transform:scale(1.08);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,30,27,.92) 0%,rgba(6,30,27,.55) 28%,transparent 55%)}
+.hero .in{position:relative;z-index:2;padding:0 20px 36px;max-width:1100px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(38px,9vw,72px);font-weight:800;text-shadow:0 3px 22px rgba(0,0,0,.55)}
+.hero h1 em{font-style:normal;color:#f6c48e}
+.hero p{margin:12px 0 20px;max-width:30ch;font-size:17px;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);color:#222;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;margin-bottom:14px}
+.badge b{color:#fbbc04;letter-spacing:1px}
+.badge i{font-style:normal;font-weight:700;color:#4285f4}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+section{padding:84px 0}
+h2{font-size:clamp(30px,6.5vw,48px);font-weight:800;color:var(--g);margin-bottom:12px}
+.lead{max-width:34ch;color:#3b504b}
+/* fotos */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
+.duo figure{border-radius:var(--r);overflow:hidden;aspect-ratio:3/4.4;position:relative;box-shadow:0 18px 40px rgba(11,58,52,.25)}
+.duo figure:nth-child(2){margin-top:34px}
+.duo img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 1.6s ease}
+.duo .on img{transform:scale(1)}
+/* rota */
+.rota{background:var(--g);color:#fff;position:relative;overflow:hidden}
+.rota h2{color:#fff}
+.rota .lead{color:#bfd8d2}
+.rota svg{width:100%;height:auto;margin-top:26px;overflow:visible}
+.path{fill:none;stroke:#f6c48e;stroke-width:3;stroke-linecap:round;stroke-dasharray:7 10}
+.path.base{stroke:rgba(255,255,255,.12);stroke-dasharray:none}
+.wave{fill:none;stroke:rgba(255,255,255,.1);stroke-width:2}
+.stop circle{fill:var(--g);stroke:#f6c48e;stroke-width:3}
+.stop text{fill:#fff;font:600 17px Figtree,sans-serif}
+.boat{fill:#fff}
+/* reviews */
+.rev{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 20px 24px;margin:26px -20px 0;scrollbar-width:none}
+.rev::-webkit-scrollbar{display:none}
+.card{flex:0 0 82%;max-width:360px;scroll-snap-align:center;background:#fff;border-radius:var(--r);padding:22px;box-shadow:0 12px 30px rgba(11,58,52,.12)}
+.card .st{color:#fbbc04;letter-spacing:2px}
+.card p{margin:8px 0 12px}
+.card small{color:#6a7f7a}
+.gsel{display:inline-flex;align-items:center;gap:10px;font-weight:600;margin-top:6px}
+.gsel b{font-size:30px;font-family:'Bricolage Grotesque'}
+/* monte */
+.monte{background:linear-gradient(160deg,var(--g2),var(--g));color:#fff}
+.monte h2{color:#fff}
+.box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:20px;margin-top:22px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.row:last-of-type{border:0}
+.ctr{display:flex;align-items:center;gap:14px}
+.ctr button{width:40px;height:40px;border-radius:50%;border:0;background:#f6c48e;color:var(--g);font-size:22px;font-weight:700;cursor:pointer}
+.ctr span{min-width:22px;text-align:center;font-weight:700;font-size:18px}
+select,input[type=text]{width:100%;margin-top:6px;padding:12px;border-radius:12px;border:0;font:inherit;background:#fff;color:var(--ink)}
+label{font-size:14px;color:#bfd8d2;display:block;margin-top:14px}
+.box .btn{width:100%;justify-content:center;margin-top:20px}
+/* chegar */
+.chegar address{font-style:normal;margin:10px 0 18px;max-width:32ch}
+.btn.out{background:var(--g);box-shadow:none}
+footer{background:var(--g);color:#bfd8d2;text-align:center;padding:60px 20px 90px}
+footer .script{font-size:44px;color:#fff;display:block}
+footer p{margin:6px 0 22px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .4s}
+.fab.on{opacity:1;pointer-events:auto}
+.fab svg{width:30px;height:30px;fill:#fff}
+@media(min-width:760px){.card{flex-basis:340px}.rev{margin-left:0;padding-left:0}section{padding:110px 0}.hero p{max-width:40ch}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero img{transform:none}.duo img{transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="wa" viewBox="0 0 32 32"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.18 1.6 6L4 28l7.17-1.88a12 12 0 0 0 4.87.99C22.68 27.1 28 21.7 28 15.07 28 8.4 22.68 3 16.04 3zm0 21.9c-1.55 0-3.07-.4-4.4-1.2l-.32-.18-4.25 1.1 1.14-4.14-.2-.33a9.9 9.9 0 0 1-1.5-5.2c0-5.5 4.5-9.96 10-9.96 5.52 0 10.02 4.46 10.02 9.96S21.56 24.9 16.04 24.9zm5.5-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.18-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.64-.93-2.25-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.12 4.53.72.3 1.28.5 1.7.63.72.23 1.37.2 1.88.12.58-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35z"/></symbol></svg>
+
+<nav id="nav"><span class="logo script">Bravamar</span><a class="btn s" href="#" data-wa="Olá! Vi o site da Bravamar e quero saber sobre o passeio de lancha."><svg><use href="#wa"/></svg>WhatsApp</a></nav>
+
+<header class="hero">
+<picture><source media="(max-width:700px)" srcset="img/hero-800.webp"><img src="img/hero-1180.webp" alt="Lancha Bravamar ancorada em água turquesa, em Ubatuba" fetchpriority="high" width="1180" height="664"></picture>
+<div class="in">
+<div class="badge"><i>G</i> 5,0 <b>★★★★★</b> Google</div>
+<h1>Ubatuba vista <em>do mar.</em></h1>
+<p>Passeio de lancha com equipe de confiança.</p>
+<a class="btn" href="#" data-wa="Olá! Vi o site da Bravamar e quero saber sobre o passeio de lancha."><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+</div>
+</header>
+
+<section>
+<div class="wrap">
+<h2 class="rv">Água calma.<br>Lancha nova.</h2>
+<p class="lead rv">Praias de água cristalina, paradas para mergulhar e churrasco a bordo.</p>
+<div class="duo">
+<figure class="rv"><img src="img/verde-1080.webp" srcset="img/verde-640.webp 640w,img/verde-1080.webp 1080w" sizes="50vw" alt="Água verde-esmeralda ao lado da lancha, com praia ao fundo" loading="lazy"></figure>
+<figure class="rv"><img src="img/azul-1080.webp" srcset="img/azul-640.webp 640w,img/azul-1080.webp 1080w" sizes="50vw" alt="Proa da lancha com vista para as ilhas de Ubatuba" loading="lazy"></figure>
+</div>
+</div>
+</section>
+
+<section class="rota" id="rota">
+<div class="wrap">
+<h2 class="rv">Seu dia no mar</h2>
+<p class="lead rv">Do embarque à volta, tudo no seu ritmo.</p>
+<svg id="rsvg" viewBox="0 0 360 430" role="img" aria-label="Rota ilustrada do passeio: embarque, praias, parada para mergulho e churrasco">
+<path class="wave" d="M0 60q30-14 60 0t60 0 60 0 60 0 60 0 60 0"/><path class="wave" d="M0 220q30-14 60 0t60 0 60 0 60 0 60 0 60 0"/><path class="wave" d="M0 380q30-14 60 0t60 0 60 0 60 0 60 0 60 0"/>
+<path class="path base" id="pb" d="M50 40 C 300 60, 300 130, 120 170 S 40 270, 250 290 S 300 380, 90 400"/>
+<path class="path" id="pp" d="M50 40 C 300 60, 300 130, 120 170 S 40 270, 250 290 S 300 380, 90 400"/>
+<g class="stop"><circle cx="50" cy="40" r="9"/><text x="68" y="46">Embarque · Ribeira</text></g>
+<g class="stop"><circle cx="205" cy="116" r="9"/><text x="150" y="102">Praias</text></g>
+<g class="stop"><circle cx="75" cy="230" r="9"/><text x="95" y="224">Mergulho</text></g>
+<g class="stop"><circle cx="250" cy="290" r="9"/><text x="150" y="324">Churrasco a bordo</text></g>
+<g class="stop"><circle cx="90" cy="400" r="9"/><text x="108" y="406">De volta</text></g>
+<g id="bt" class="boat"><path d="M-16 0h32l-6 10h-20z"/><path d="M-4-14l12 11h-12z" fill="#f6c48e"/></g>
+</svg>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2 class="rv">Quem foi, indica.</h2>
+<div class="gsel rv"><b>5,0</b><span>29 avaliações<br>no Google</span></div>
+<div class="rev wrap" style="max-width:none">
+<div class="card rv"><div class="st">★★★★★</div><p>“Passeio maravilhoso, Nicolas foi super gente boa e adoramos todas as praias.”</p><small>Avaliação no Google</small></div>
+<div class="card rv"><div class="st">★★★★★</div><p>“Vale muito o investimento, atendimento ótimo e deixa o pessoal confortável.”</p><small>Avaliação no Google</small></div>
+<div class="card rv"><div class="st">★★★★★</div><p>“A lancha é nova e com todos os itens de segurança e de conforto necessários.”</p><small>Silvana B. · Local Guide</small></div>
+<div class="card rv"><div class="st">★★★★★</div><p>“Excelente equipe, todos grandes profissionais.”</p><small>Avaliação no Google</small></div>
+</div>
+</div>
+</section>
+
+<section class="monte" id="monte">
+<div class="wrap">
+<h2 class="rv">Monte seu passeio</h2>
+<p class="lead rv" style="color:#bfd8d2">Escolha e envie. A resposta vem pelo WhatsApp.</p>
+<div class="box rv">
+<div class="row"><span>Adultos</span><div class="ctr"><button data-k="ad" data-d="-1" aria-label="menos adultos">−</button><span id="ad">2</span><button data-k="ad" data-d="1" aria-label="mais adultos">+</button></div></div>
+<div class="row"><span>Crianças</span><div class="ctr"><button data-k="cr" data-d="-1" aria-label="menos crianças">−</button><span id="cr">0</span><button data-k="cr" data-d="1" aria-label="mais crianças">+</button></div></div>
+<label for="tp">Tipo</label>
+<select id="tp"><option>passeio de lancha</option><option>passeio com churrasco a bordo</option><option>passeio em comemoração (aniversário, grupo)</option></select>
+<label for="dt">Data desejada</label>
+<input type="text" id="dt" placeholder="Ex.: sábado, 15/11" autocomplete="off">
+<a class="btn" id="send" href="#"><svg><use href="#wa"/></svg>Enviar pelo WhatsApp</a>
+</div>
+</div>
+</section>
+
+<section class="chegar">
+<div class="wrap">
+<h2 class="rv">Como chegar</h2>
+<address class="rv">Estrada da Ribeira · Flamengo / Praias da Ribeira e Sete Fontes<br>Ubatuba · SP · 11680-000<br>Aberto até 17h</address>
+<a class="btn out rv" href="https://www.google.com/maps/place/BRAVAMAR+Passeios+de+lancha+em+Ubatuba/@-23.5059628,-45.1160084,17z" target="_blank" rel="noopener">Abrir no Google Maps</a>
+</div>
+</section>
+
+<footer>
+<span class="script">Bravamar</span>
+<p>Passeios de lancha · Ubatuba</p>
+<a class="btn" href="#" data-wa="Olá! Vi o site da Bravamar e quero saber sobre o passeio de lancha."><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+</footer>
+
+<a class="fab" id="fab" href="#" data-wa="Olá! Vi o site da Bravamar e quero saber sobre o passeio de lancha." aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+var N='5512992079031';
+function wa(t){return 'https://wa.me/'+N+'?text='+encodeURIComponent(t)}
+document.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.dataset.wa)});
+var c={ad:2,cr:0};
+document.querySelectorAll('.ctr button').forEach(function(b){b.onclick=function(){var k=b.dataset.k;c[k]=Math.max(k=='ad'?1:0,Math.min(19,c[k]+ +b.dataset.d));document.getElementById(k).textContent=c[k];up()}});
+function up(){var cr=c.cr?' e '+c.cr+(c.cr>1?' crianças':' criança'):'';var d=document.getElementById('dt').value.trim();
+document.getElementById('send').href=wa('Olá! Vi o site da Bravamar. Somos '+c.ad+(c.ad>1?' adultos':' adulto')+cr+' e queremos um '+document.getElementById('tp').value+(d?' em '+d:'')+'. Pode me passar os detalhes?')}
+document.getElementById('tp').onchange=up;document.getElementById('dt').oninput=up;up();
+/* reveal */
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*.08+'s';io.observe(el)});
+/* nav hide + fab + rota */
+var nav=document.getElementById('nav'),fab=document.getElementById('fab'),ly=0;
+var pp=document.getElementById('pp'),L=pp.getTotalLength(),bt=document.getElementById('bt'),rs=document.getElementById('rota'),tk=false;
+pp.style.strokeDasharray=L;pp.style.strokeDashoffset=L;
+function rota(){var r=rs.getBoundingClientRect(),vh=innerHeight;var p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height*.8)));
+pp.style.strokeDashoffset=L*(1-p);var pt=pp.getPointAtLength(L*p);bt.setAttribute('transform','translate('+pt.x+' '+pt.y+')')}
+function onS(){var y=scrollY;nav.classList.toggle('hide',y>80&&y>ly);ly=y;fab.classList.toggle('on',y>innerHeight*.6);rota();tk=false}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){pp.style.strokeDashoffset=0}
+onS();
+</script>
+</body>
+</html>
