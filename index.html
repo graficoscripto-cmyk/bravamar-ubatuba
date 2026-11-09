@@ -46,9 +46,8 @@ h1,h2,h3{font-family:'Young Serif',Georgia,serif;font-weight:400;line-height:1.0
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top));transition:transform .45s var(--ease),background .4s,box-shadow .4s}
 .nav.solid{background:rgba(4,27,46,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 6px 24px -10px rgba(0,0,0,.6)}
 .nav.hide{transform:translateY(-150%)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-height:44px}
-.brand svg{width:46px;height:36px}
-.brand b{font:400 21px 'Young Serif',serif;letter-spacing:.03em;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-height:44px;background:#F5F5F3;border-radius:12px;padding:4px 10px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.brand img{height:38px;width:auto;display:block}
 .nav ul{display:none;list-style:none;gap:28px}
 .nav ul a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 4px;opacity:.9;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .nav ul a:hover{opacity:1;color:var(--gold)}
@@ -86,24 +85,21 @@ section{position:relative}
 .pad{padding:76px 0 120px}
 /* ondas */
 .wv{position:absolute;left:0;right:0;bottom:-1px;height:48px;line-height:0;pointer-events:none;z-index:3;overflow:hidden}
-.wv svg{max-width:none;width:160%;height:100%;margin-left:-30%;animation:wvm 9s ease-in-out infinite alternate}
-@keyframes wvm{to{transform:translateX(7%)}}
-/* rota */
-.rota{background:var(--navy);color:#fff;padding:20px 0 0;overflow:hidden}
-.rota .head{padding-bottom:22px}
+.wv svg{max-width:none;width:100%;height:100%;margin-left:0;animation:none}
+/* rota vertical */
+.rota{background:var(--navy);color:#fff;padding:20px 0 88px;overflow:hidden}
+.rota .head{padding-bottom:20px}
 .rota h2{margin:0}
-.scene{position:relative;height:340px;width:100%}
-.scene svg{width:100%;height:100%;display:block}
-.scene-cap{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:8px;min-height:38px;padding:0 16px;border-radius:999px;background:rgba(4,27,46,.7);border:1px solid rgba(242,180,65,.5);backdrop-filter:blur(8px);font-weight:700;font-size:14px;white-space:nowrap;color:#fff}
+.scene{position:relative;width:100%;max-width:520px;margin:0 auto;padding:0 16px}
+.scene-box{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 26px 50px -20px rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.14);background:var(--deep)}
+.scene svg{width:100%;height:auto;display:block}
+.scene-cap{position:sticky;top:16px;margin:0 auto 14px;width:fit-content;z-index:4;display:flex;align-items:center;gap:8px;min-height:38px;padding:0 16px;border-radius:999px;background:rgba(4,27,46,.82);border:1px solid rgba(242,180,65,.55);backdrop-filter:blur(8px);font-weight:700;font-size:14px;white-space:nowrap;color:#fff}
 .scene-cap i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(242,180,65,.25)}
 .rota .wv{height:52px}
-@keyframes wavex{to{transform:translateX(-600px)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes flap{50%{transform:scaleY(.55)}}
 @keyframes twk{50%{opacity:.15}}
-.wl{animation:wavex 14s linear infinite}
-.wl.f{animation-duration:9s}
-.rays{transform-origin:800px 215px;animation:spin 80s linear infinite}
+.rays{transform-origin:210px 108px;animation:spin 80s linear infinite}
 .gull{transform-box:fill-box;transform-origin:center;animation:flap 1.1s ease-in-out infinite}
 .tw{animation:twk 3.4s ease-in-out infinite}
 /* roteiros */
@@ -198,9 +194,8 @@ input[type=date]{width:100%;min-height:58px;padding:0 16px;border-radius:18px;bo
 .btn.wz{background:#33ccff;color:#06324a;box-shadow:0 12px 26px -12px rgba(51,204,255,.8)}
 /* footer */
 footer{background:var(--deep);color:#c3d6e2;padding:64px 0 120px;text-align:center;position:relative}
-footer .brand{justify-content:center;margin-bottom:6px}
-footer .brand svg{width:64px;height:50px}
-footer .brand b{font-size:30px}
+footer .brand{justify-content:center;margin:0 auto 12px;padding:8px 16px;border-radius:16px}
+footer .brand img{height:64px;width:auto}
 footer .tag{color:var(--gold);font-weight:700;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
 footer p{margin:18px auto 22px;max-width:36ch;font-size:15px}
 footer .btn{width:100%;max-width:340px}
@@ -222,7 +217,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
 .lb .x{top:calc(14px + env(safe-area-inset-top));right:14px}
 .lb .p{left:10px;top:50%;margin-top:-24px}.lb .n{right:10px;top:50%;margin-top:-24px}
 @media(min-width:720px){
- .nav{padding:12px 32px}.nav ul{display:flex}.brand svg{width:54px;height:42px}
+ .nav{padding:12px 32px}.nav ul{display:flex}.brand img{height:44px}
  .wrap{padding:0 40px}
  .hero{min-height:100svh;display:flex;align-items:flex-end}
  .hero-photo{position:absolute;inset:0;height:auto}
@@ -230,10 +225,9 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
  .hero-photo::after{background:linear-gradient(to bottom,rgba(4,27,46,.5) 0%,rgba(4,27,46,0) 24%,rgba(7,43,71,0) 40%,rgba(7,43,71,.82) 78%,var(--navy) 92%,var(--navy) 100%),linear-gradient(to right,rgba(4,27,46,.55),transparent 60%)}
  .hero-body{margin:0 auto;width:100%;padding:140px 40px 40px}
  .hero .btn{width:auto;min-width:300px}
- .scene{height:480px}
- .scene-cap{top:18px}
+ .scene{max-width:560px}
  .pad{padding:110px 0 160px}
- .rota{padding-top:32px}
+ .rota{padding:32px 0 120px}
  .stop{flex-basis:320px}
  .car{margin:0;padding-left:0;padding-right:40px;scroll-padding:0}
  .duo{gap:20px}.duo figure:nth-child(2){margin-top:60px}
@@ -271,15 +265,6 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <symbol id="wa" viewBox="0 0 32 32"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.18 1.6 6L4 28l7.17-1.88a12 12 0 0 0 4.87.99C22.68 27.1 28 21.7 28 15.07 28 8.4 22.68 3 16.04 3zm0 21.9c-1.55 0-3.07-.4-4.4-1.2l-.32-.18-4.25 1.1 1.14-4.14-.2-.33a9.9 9.9 0 0 1-1.5-5.2c0-5.5 4.5-9.96 10-9.96 5.52 0 10.02 4.46 10.02 9.96S21.56 24.9 16.04 24.9zm5.5-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.18-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.64-.93-2.25-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.12 4.53.72.3 1.28.5 1.7.63.72.23 1.37.2 1.88.12.58-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35z"/></symbol>
 <symbol id="gg" viewBox="0 0 48 48"><path fill="#4285f4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8a10.1 10.1 0 0 1-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34a853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.4v5.7A22 22 0 0 0 24 46z"/><path fill="#fbbc04" d="M11.8 28.2a13.2 13.2 0 0 1 0-8.4v-5.7H4.4a22 22 0 0 0 0 19.8z"/><path fill="#ea4335" d="M24 10.6c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3A22 22 0 0 0 4.4 14.1l7.4 5.7c1.7-5.2 6.5-9.2 12.2-9.2z"/></symbol>
-<symbol id="emb" viewBox="0 0 120 92">
- <circle cx="70" cy="34" r="27" fill="#F2B441"/>
- <path d="M88 8l3-3 3 2M99 14l3-2 2 2M94 22l3-1 2 2" stroke="#F6F3EB" stroke-width="2" fill="none" stroke-linecap="round" opacity=".9"/>
- <path d="M10 50l12-9c10-7 28-9 46-10l18-1c9 0 14 3 18 8l-6 14c-10 8-30 12-52 11-12-1-22-4-30-8z" fill="#F6F3EB"/>
- <path d="M16 52c24 5 52 4 76-5l4-3c-3 8-9 14-22 18-20 5-42 1-58-10z" fill="#0A3556"/>
- <path d="M30 40l16-11c10-4 22-4 30 2l4 8z" fill="#F6F3EB"/><path d="M42 36l14-7c6-1 14-1 20 3l3 5z" fill="#0A3556"/>
- <path d="M2 68c14-9 28-4 38-1s22 5 36-3c12-6 24-3 42 4-8 12-22 16-40 12-14-4-24-9-36-6-14 3-26 6-40-6z" fill="#1695A3"/>
- <path d="M8 78c16-6 28 2 44 6 16 3 38 0 58-10-6 12-18 18-36 16-14-1-26-9-38-9-12 0-20 3-28-3z" fill="#23B5C6"/>
-</symbol>
 <symbol id="boat" viewBox="0 0 130 56">
  <path d="M0 30c8-6 16-7 26-8l56-5c14-1 24 0 36 5l10 6-8 4-12 12c-22 4-48 4-72 0C22 40 8 36 0 30z" fill="#F6F3EB"/>
  <path d="M6 31c36 7 76 6 112-6l8 3-14 14c-24 5-50 5-74 1-14-3-26-6-32-12z" fill="#0A3556"/>
@@ -291,7 +276,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
 </svg>
 
 <nav class="nav" id="nav" aria-label="Principal">
- <a class="brand" href="#topo" aria-label="BRAVAMAR — início"><svg viewBox="0 0 120 92"><use href="#emb"/></svg><b>BRAVAMAR</b></a>
+ <a class="brand" href="#topo" aria-label="BRAVAMAR — início"><img src="img/logo-oficial.webp" alt="BRAVAMAR — Aventura sobre as ondas" width="840" height="678"></a>
  <ul><li><a href="#roteiros">Roteiros</a></li><li><a href="#lancha">A Lancha</a></li><li><a href="#monte">Monte seu Passeio</a></li></ul>
  <a class="btn" href="#monte">Reservar</a>
 </nav>
@@ -315,31 +300,38 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
   <h2 id="rt" data-split>Seu dia no mar, no seu ritmo.</h2>
  </div>
  <div class="scene" id="scene">
-  <svg id="sv" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cena animada: lancha navegando por ondas turquesa, com sol dourado e gaivotas, passando pelas paradas do roteiro em Ubatuba">
-   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#072B47"/><stop offset=".45" stop-color="#0A3F5E"/><stop offset=".78" stop-color="#1695A3"/><stop offset="1" stop-color="#F2B441"/></linearGradient>
-    <radialGradient id="glow" cx="800" cy="215" r="260" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F2B441" stop-opacity=".75"/><stop offset=".5" stop-color="#F2B441" stop-opacity=".18"/><stop offset="1" stop-color="#F2B441" stop-opacity="0"/></radialGradient>
-    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23B5C6"/><stop offset=".45" stop-color="#1695A3"/><stop offset="1" stop-color="#0B4F63"/></linearGradient>
-    <linearGradient id="mt1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E5A63"/><stop offset="1" stop-color="#0B3E5C"/></linearGradient>
-    <linearGradient id="mt2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D4A47"/><stop offset="1" stop-color="#072B47"/></linearGradient>
-   </defs>
-   <rect width="1200" height="420" fill="url(#sky)"/>
-   <g id="stars" fill="#fff"></g>
-   <circle cx="800" cy="215" r="260" fill="url(#glow)" id="glow"/>
-   <g id="sunG"><g class="rays" stroke="#F2B441" stroke-width="3" stroke-linecap="round" opacity=".55" id="rays"></g><circle cx="800" cy="215" r="62" fill="#F2B441"/></g>
-   <g id="gulls" fill="none" stroke="#F6F3EB" stroke-width="3" stroke-linecap="round"><path class="gull" d="M930 96q10-12 20 0 10-12 20 0"/><path class="gull" style="animation-delay:.3s" d="M990 70q8-10 16 0 8-10 16 0"/><path class="gull" style="animation-delay:.6s" d="M890 130q7-9 14 0 7-9 14 0"/></g>
-   <g id="mtF"><path fill="url(#mt1)" d="M-60 252V215C0 190 50 160 110 170c60 10 100 45 160 35 70-15 120-55 190-45 80 12 130 70 210 84 70 10 150-8 210-30 60-23 110-40 170-28 70 13 120 60 190 60V270H-60z"/></g>
-   <g id="mtN"><path fill="url(#mt2)" d="M-60 300V222C-10 190 60 186 120 206c60 22 100 58 180 76l40 18z"/><path fill="url(#mt2)" d="M860 300c50-40 110-62 170-60 70 3 120 30 230 60z"/><path fill="#0E4B4B" opacity=".55" d="M1010 244c30-6 60-4 90 8-30 0-60 4-90-8z"/></g>
-   <rect y="262" width="1400" height="170" x="-100" fill="url(#sea)"/>
-   <g id="shine" stroke="#F2B441" stroke-linecap="round" opacity=".7"><line x1="800" y1="272" x2="800" y2="274" stroke-width="3" class="tw"/><line x1="780" y1="284" x2="820" y2="284" stroke-width="3" class="tw" style="animation-delay:.5s"/><line x1="768" y1="298" x2="832" y2="298" stroke-width="3" class="tw" style="animation-delay:1s"/><line x1="790" y1="314" x2="816" y2="314" stroke-width="2.5" class="tw" style="animation-delay:1.5s"/></g>
-   <g id="waveM" opacity=".55"><g class="wl" id="wl1"></g></g>
-   <path id="trailB" d="M60 318C200 278 300 345 450 312S690 276 800 318 1010 356 1140 304" fill="none" stroke="rgba(246,243,235,.28)" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
-   <path id="trail" d="M60 318C200 278 300 345 450 312S690 276 800 318 1010 356 1140 304" fill="none" stroke="#F2B441" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
-   <g id="stopsG"></g>
-   <g id="boatG"><g id="boatB"><use href="#boat" x="-88" y="-60" width="176" height="76"/></g></g>
-   <g id="waveF"><g class="wl f" id="wl2"></g></g>
-  </svg>
-  <div class="scene-cap" aria-live="polite"><i></i><span id="capT">Saco da Ribeira</span></div>
+  <div class="scene-cap" aria-live="polite"><i></i><span id="capT">1. Saco da Ribeira (Embarque)</span></div>
+  <div class="scene-box">
+   <svg id="sv" viewBox="0 0 420 680" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Roteiro vertical em Ubatuba: lancha descendo de Saco da Ribeira até Praia do Flamengo, Sete Fontes, Ilha Anchieta e Churrasco a bordo">
+    <defs>
+     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#072B47"/><stop offset=".55" stop-color="#0A3F5E"/><stop offset=".85" stop-color="#1695A3"/><stop offset="1" stop-color="#F2B441"/></linearGradient>
+     <radialGradient id="glow" cx="210" cy="108" r="145" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F2B441" stop-opacity=".78"/><stop offset=".55" stop-color="#F2B441" stop-opacity=".2"/><stop offset="1" stop-color="#F2B441" stop-opacity="0"/></radialGradient>
+     <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23B5C6"/><stop offset=".35" stop-color="#1695A3"/><stop offset=".75" stop-color="#0B5F6B"/><stop offset="1" stop-color="#072B47"/></linearGradient>
+     <linearGradient id="mt1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E5A63"/><stop offset="1" stop-color="#0B3E5C"/></linearGradient>
+     <linearGradient id="mt2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D4A47"/><stop offset="1" stop-color="#072B47"/></linearGradient>
+     <clipPath id="cl"><rect id="clipRect" x="0" y="0" width="420" height="220"/></clipPath>
+    </defs>
+    <rect width="420" height="190" fill="url(#sky)"/>
+    <g id="stars" fill="#fff"></g>
+    <circle cx="210" cy="108" r="145" fill="url(#glow)" id="glowC"/>
+    <g id="sunG"><g class="rays" stroke="#F2B441" stroke-width="2.5" stroke-linecap="round" opacity=".55" id="rays"></g><circle cx="210" cy="108" r="42" fill="#F2B441"/></g>
+    <g id="gulls" fill="none" stroke="#F6F3EB" stroke-width="2.5" stroke-linecap="round"><path class="gull" d="M286 58q7-9 14 0 7-9 14 0"/><path class="gull" style="animation-delay:.3s" d="M324 44q6-8 12 0 6-8 12 0"/><path class="gull" style="animation-delay:.6s" d="M268 78q5-7 10 0 5-7 10 0"/></g>
+    <g id="mtF"><path fill="url(#mt1)" d="M0 176V142c38-18 76-26 118-14 42 12 82 28 132 16 46-12 88-30 170-8v40z"/></g>
+    <g id="mtN"><path fill="url(#mt2)" d="M0 184V152c34-14 78-10 128 12 36 14 72 18 112 20z"/><path fill="url(#mt2)" d="M250 184c42-22 86-32 170-18v18z"/></g>
+    <rect y="176" width="420" height="504" fill="url(#sea)"/>
+    <g stroke="rgba(255,255,255,.14)" stroke-width="1.5" fill="none">
+     <path d="M0 205q52-8 105 0t105 0 105 0 105 0"/>
+     <path d="M0 310q52-8 105 0t105 0 105 0 105 0"/>
+     <path d="M0 415q52-8 105 0t105 0 105 0 105 0"/>
+     <path d="M0 520q52-8 105 0t105 0 105 0 105 0"/>
+     <path d="M0 625q52-8 105 0t105 0 105 0 105 0"/>
+    </g>
+    <path id="trailB" d="M96 220 L96 620" fill="none" stroke="rgba(246,243,235,.28)" stroke-width="3.5" stroke-dasharray="2 12" stroke-linecap="round"/>
+    <path id="trail" d="M96 220 L96 620" fill="none" stroke="#F2B441" stroke-width="4.5" stroke-dasharray="2 12" stroke-linecap="round" clip-path="url(#cl)"/>
+    <g id="stopsG"></g>
+    <g id="boatG"><g id="boatB"><use href="#boat" x="-48" y="-22" width="96" height="42"/></g></g>
+   </svg>
+  </div>
  </div>
  <div class="wv" style="color:var(--sand)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 44C140 78 280 10 440 40S740 80 900 42s300-30 540 8V80H0z"/></svg></div>
 </section>
@@ -465,7 +457,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
 
 <footer>
  <div class="wrap">
-  <a class="brand" href="#topo"><svg viewBox="0 0 120 92"><use href="#emb"/></svg><b>BRAVAMAR</b></a>
+  <a class="brand" href="#topo" aria-label="BRAVAMAR — voltar ao topo"><img src="img/logo-oficial.webp" alt="BRAVAMAR — Aventura sobre as ondas" width="840" height="678"></a>
   <div class="tag">Aventura sobre as ondas</div>
   <p>BRAVAMAR Passeios de lancha em Ubatuba · Estrada da Ribeira, Flamengo · SP</p>
   <a class="btn wa" href="#" data-wa="Olá! Vi o site da BRAVAMAR e quero saber sobre o passeio de lancha em Ubatuba."><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
@@ -490,42 +482,38 @@ var $=function(s,c){return (c||document).querySelector(s)};
 /* ---------- SVG: gerar elementos ---------- */
 var NS='http://www.w3.org/2000/svg';
 function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
-var stars=$('#stars');for(var i=0;i<46;i++){var r=Math.random();var c=el('circle',{cx:Math.round(Math.random()*1200),cy:Math.round(Math.random()*150),r:(.6+r*1.1).toFixed(1),opacity:(.35+r*.5).toFixed(2)},stars);if(i%3==0){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*3).toFixed(1)+'s'}}
-var rays=$('#rays');for(var j=0;j<14;j++){var a=j*Math.PI*2/14;el('line',{x1:800+Math.cos(a)*76,y1:215+Math.sin(a)*76,x2:800+Math.cos(a)*(j%2?96:112),y2:215+Math.sin(a)*(j%2?96:112)},rays)}
-function wavePath(y,amp,len,reps){var d='M0 '+y;for(var k=0;k<reps;k++)d+='q'+len/4+' '+(-amp)+' '+len/2+' 0t'+len/2+' 0';return d}
-['wl1','wl2'].forEach(function(id,ix){var g=$('#'+id);
- [[300+ix*60,10,150],[330+ix*54,13,200],[358+ix*46,15,170]].forEach(function(p,n){if(ix==0&&n==2)return;
-  var pth=el('path',{d:wavePath(p[0],p[1],p[2],Math.ceil(2200/p[2])*2+2)+'V440H0z',fill:ix?(n==2?'#0F7A87':'#1695A3'):'#23B5C6',opacity:ix?(.9-n*.12):.5},g);pth.setAttribute('transform','translate('+(-n*70)+' 0)')})});
-/* ---------- rota ---------- */
-var trail=$('#trail'),TL=trail.getTotalLength();trail.style.strokeDasharray='2 12';
-var stopNames=['Saco da Ribeira','Praia do Flamengo','Sete Fontes','Ilha Anchieta','Churrasco a bordo'],stopF=[0,.27,.52,.77,1],stopsG=$('#stopsG'),dots=[];
-stopF.forEach(function(f){var pt=trail.getPointAtLength(TL*f);var g=el('g',{transform:'translate('+pt.x+' '+pt.y+')'},stopsG);el('circle',{r:13,fill:'rgba(242,180,65,.22)'},g);var c=el('circle',{r:6,fill:'#041B2E',stroke:'#F2B441','stroke-width':3},g);dots.push(c)});
-var boat=$('#boatG'),boatB=$('#boatB'),capT=$('#capT'),sv=$('#sv'),scene=$('#scene');
+var stars=$('#stars');for(var i=0;i<28;i++){var r=Math.random();var c=el('circle',{cx:Math.round(Math.random()*420),cy:Math.round(Math.random()*95),r:(.6+r*1.1).toFixed(1),opacity:(.35+r*.5).toFixed(2)},stars);if(i%3==0){c.setAttribute('class','tw');c.style.animationDelay=(Math.random()*3).toFixed(1)+'s'}}
+var rays=$('#rays');for(var j=0;j<14;j++){var a=j*Math.PI*2/14;el('line',{x1:210+Math.cos(a)*50,y1:108+Math.sin(a)*50,x2:210+Math.cos(a)*(j%2?64:76),y2:108+Math.sin(a)*(j%2?64:76)},rays)}
+/* ---------- rota vertical (100% para baixo) ---------- */
+var stopNames=['1. Saco da Ribeira (Embarque)','2. Praia do Flamengo','3. Praia das Sete Fontes','4. Ilha Anchieta','5. Churrasco a bordo'],
+    stopSubs=['Ponto de partida · água abrigada','Água calma e coqueiros','Mar verde-turquesa cristalino','Parada clássica entre as ilhas','Preparado na lancha, sem pressa'],
+    stopY=[220,320,420,520,620],stopF=[0,.25,.5,.75,1],stopsG=$('#stopsG'),dots=[],cards=[];
+stopY.forEach(function(y,i){
+ var g=el('g',{transform:'translate(96 '+y+')'},stopsG);
+ el('circle',{r:15,fill:'rgba(242,180,65,.22)'},g);
+ var c=el('circle',{r:7,fill:'#041B2E',stroke:'#F2B441','stroke-width':3},g);dots.push(c);
+ var cg=el('g',{transform:'translate(34 -24)'},g);
+ var rct=el('rect',{x:0,y:0,width:262,height:50,rx:14,fill:'rgba(4,27,46,.78)',stroke:'rgba(242,180,65,.38)','stroke-width':1.5},cg);
+ var t1=el('text',{x:14,y:21,fill:'#fff','font-family':"'Young Serif',Georgia,serif",'font-size':15},cg);t1.textContent=stopNames[i];
+ var t2=el('text',{x:14,y:39,fill:'#F2B441','font-family':"'Hanken Grotesk',sans-serif",'font-size':12,'font-weight':600},cg);t2.textContent=stopSubs[i];
+ cards.push(rct);
+});
+var boat=$('#boatG'),boatB=$('#boatB'),capT=$('#capT'),clipRect=$('#clipRect');
 var cur=-1;
 function place(p){
- var L=TL*p,pt=trail.getPointAtLength(L),pt2=trail.getPointAtLength(Math.min(TL,L+4));
- var ang=Math.max(-9,Math.min(9,Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI));
- boat.setAttribute('transform','translate('+pt.x+' '+pt.y+') rotate('+ang+')');
- trail.style.strokeDashoffset=0;trail.setAttribute('stroke-dasharray','2 12');
- var vis=L; trail.style.clipPath='none';
- trailClip(L);
- var idx=0;stopF.forEach(function(f,i){if(p>=f-.02){idx=i;dots[i].setAttribute('fill','#F2B441')}else dots[i].setAttribute('fill','#041B2E')});
+ var y=220+400*p;
+ boat.setAttribute('transform','translate(54 '+y.toFixed(1)+')');
+ clipRect.setAttribute('height',(y+4).toFixed(1));
+ var idx=0;stopF.forEach(function(f,i){
+  if(p>=f-.03){idx=i;dots[i].setAttribute('fill','#F2B441');cards[i].setAttribute('stroke','#F2B441');cards[i].setAttribute('fill','rgba(4,27,46,.92)')}
+  else{dots[i].setAttribute('fill','#041B2E');cards[i].setAttribute('stroke','rgba(242,180,65,.32)');cards[i].setAttribute('fill','rgba(4,27,46,.68)')}
+ });
  if(idx!==cur){cur=idx;capT.textContent=stopNames[idx]}
- camera(pt.x);
 }
-var clipR=el('clipPath',{id:'cl'},$('#sv defs'));var clipRect=el('rect',{x:-100,y:0,width:0,height:430},clipR);trail.setAttribute('clip-path','url(#cl)');
-function trailClip(L){var pt=trail.getPointAtLength(L);clipRect.setAttribute('width',pt.x+100)}
-var vbW=1200;
-function size(){var w=scene.clientWidth,h=scene.clientHeight;vbW=Math.min(1200,420*w/h);sv.setAttribute('preserveAspectRatio','xMidYMid meet');sv.setAttribute('viewBox','0 0 '+vbW.toFixed(1)+' 420')}
-var camX=0;
-function camera(x){if(vbW>=1199){sv.setAttribute('viewBox','0 0 1200 420');return}
- var vx=Math.max(0,Math.min(1200-vbW,x-vbW*.5));sv.setAttribute('viewBox',vx.toFixed(1)+' 0 '+vbW.toFixed(1)+' 420');
- var cap=$('.scene-cap');}
-size();
 /* ---------- GSAP ---------- */
 function splitWords(e){var t=e.textContent.trim().split(/\s+/);e.textContent='';t.forEach(function(w,i){var m=document.createElement('span');m.className='wm';var s=document.createElement('span');s.className='wi';s.textContent=w;m.appendChild(s);e.appendChild(m);if(i<t.length-1)e.appendChild(document.createTextNode(' '))})}
 document.querySelectorAll('[data-split]').forEach(splitWords);
-function showAll(){document.querySelectorAll('.rv').forEach(function(e){e.style.opacity=1});place(.5)}
+function showAll(){document.querySelectorAll('.rv').forEach(function(e){e.style.opacity=1});place(1)}
 if(!window.gsap||!window.ScrollTrigger||reduce){showAll();document.querySelectorAll('.wi').forEach(function(e){e.style.transform='none'})}
 else{
  gsap.registerPlugin(ScrollTrigger);
@@ -540,25 +528,29 @@ else{
  ScrollTrigger.batch('.rv:not(.hero .rv)',{start:'top 90%',once:true,onEnter:function(b){gsap.fromTo(b,{y:34,opacity:0,filter:'blur(8px)'},{y:0,opacity:1,filter:'blur(0px)',duration:.9,stagger:.09,ease:'power3.out',overwrite:true})}});
  gsap.utils.toArray('[data-par]').forEach(function(i){gsap.fromTo(i,{scale:1.18,yPercent:-4},{scale:1.04,yPercent:4,ease:'none',scrollTrigger:{trigger:i.parentNode,start:'top bottom',end:'bottom top',scrub:true}})});
  gsap.utils.toArray('.feat svg').forEach(function(s,i){gsap.from(s,{scale:.4,rotate:-25,opacity:0,duration:.8,ease:'back.out(2.2)',scrollTrigger:{trigger:s,start:'top 92%',once:true}})});
- /* cena panorâmica */
+ /* cena vertical (só para baixo) */
  var proxy={p:0};
- gsap.set('#sunG',{y:46,transformOrigin:'800px 215px'});gsap.set('#glow',{opacity:.35});
- var sc=gsap.timeline({scrollTrigger:{trigger:'#scene',start:'top 85%',end:'bottom 22%',scrub:.8}});
+ gsap.set('#sunG',{y:28,transformOrigin:'210px 108px'});gsap.set('#glowC',{opacity:.4});
+ var sc=gsap.timeline({scrollTrigger:{trigger:'#scene',start:'top 80%',end:'bottom 25%',scrub:.6}});
  sc.to(proxy,{p:1,ease:'none',duration:1,onUpdate:function(){place(proxy.p)}},0)
-   .to('#sunG',{y:0,ease:'none',duration:1},0).to('#glow',{opacity:1,ease:'none',duration:1},0)
-   .fromTo('#mtF',{x:-24},{x:24,ease:'none',duration:1},0).fromTo('#mtN',{x:34},{x:-34,ease:'none',duration:1},0)
-   .fromTo('#gulls',{x:-60},{x:50,y:-8,ease:'none',duration:1},0);
+   .to('#sunG',{y:0,ease:'none',duration:1},0).to('#glowC',{opacity:1,ease:'none',duration:1},0);
  place(0);
- gsap.to(boatB,{y:-3,rotation:1.6,duration:1.4,yoyo:true,repeat:-1,ease:'sine.inOut',transformOrigin:'center bottom'});
- gsap.from('.scene-cap',{y:20,opacity:0,duration:.8,scrollTrigger:{trigger:'#scene',start:'top 75%',once:true}});
- var ft=$('.hero-photo');
+ gsap.to(boatB,{y:-3,duration:1.4,yoyo:true,repeat:-1,ease:'sine.inOut'});
+ gsap.from('.scene-cap',{y:16,opacity:0,duration:.8,scrollTrigger:{trigger:'#scene',start:'top 80%',once:true}});
  addEventListener('load',function(){ScrollTrigger.refresh()});
 }
-addEventListener('resize',function(){size();if(window.gsap)place(proxyP())});
-function proxyP(){var s=ScrollTrigger&&ScrollTrigger.getAll().filter(function(t){return t.trigger&&t.trigger.id=='scene'})[0];return s?s.progress:0.5}
 /* ---------- nav / fab ---------- */
 var nav=$('#nav'),fab=$('#fab'),ly=0,tk=false;
-function onS(){var y=scrollY;nav.classList.toggle('solid',y>40);nav.classList.toggle('hide',y>120&&y>ly+4);if(y<ly-4)nav.classList.remove('hide');ly=y;fab.classList.toggle('on',y>innerHeight*.5);tk=false}
+function onS(){
+ var y=scrollY;
+ nav.classList.toggle('solid',y>40);
+ if(y<=60){nav.classList.remove('hide');}
+ else if(y>ly+2){nav.classList.add('hide');}
+ else if(y<ly-8){nav.classList.remove('hide');}
+ ly=y;
+ fab.classList.toggle('on',y>innerHeight*.5);
+ tk=false;
+}
 addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});onS();
 /* ---------- carrossel: lightbox ---------- */
 var items=[].slice.call(document.querySelectorAll('[data-lb]')),li=0,lb=$('#lb'),lbi=$('#lbi'),lbc=$('#lbc');
