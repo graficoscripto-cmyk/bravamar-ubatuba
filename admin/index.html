@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Painel do Cliente · BRAVAMAR Ubatuba</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#041B2E">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#072B47;
+  --navy2:#0A3556;
+  --deep:#041B2E;
+  --card:#08263E;
+  --card2:#0C314F;
+  --teal:#1695A3;
+  --aqua:#23B5C6;
+  --gold:#F2B441;
+  --amber:#D99B26;
+  --sand:#F6F3EB;
+  --danger:#ef4444;
+  --ok:#22c55e;
+  --border:rgba(255,255,255,.13);
+  --ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;max-width:100%;overflow-x:clip}
+body{
+  font:400 16px/1.5 'Hanken Grotesk',system-ui,sans-serif;
+  color:#f0f6fa;
+  background:radial-gradient(900px 500px at 85% -10%,rgba(35,181,198,.2),transparent 70%),
+             radial-gradient(700px 450px at -10% 100%,rgba(242,180,65,.14),transparent 70%),
+             var(--deep);
+  min-height:100svh;
+  max-width:100%;
+  overflow-x:clip;
+}
+h1,h2,h3{font-family:'Young Serif',Georgia,serif;font-weight:400;line-height:1.15}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+
+/* LOGIN SCREEN */
+.login-wrap{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px 16px;
+}
+.login-card{
+  width:100%;
+  max-width:420px;
+  background:rgba(8,38,62,.92);
+  border:1px solid rgba(242,180,65,.32);
+  border-radius:28px;
+  padding:32px 24px;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.75);
+  backdrop-filter:blur(16px);
+  text-align:center;
+}
+.login-brand{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#F5F5F3;
+  padding:8px 18px;
+  border-radius:16px;
+  margin-bottom:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.login-brand img{height:54px;width:auto}
+.login-badge{
+  display:inline-block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--navy);
+  background:var(--gold);
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+.login-card h1{font-size:28px;margin-bottom:6px;color:#fff}
+.login-card p{font-size:14.5px;color:#b8d0e0;margin-bottom:22px}
+.fg{text-align:left;margin-bottom:16px}
+.fg label{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:6px;
+}
+.inp{
+  width:100%;
+  min-height:48px;
+  padding:11px 14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(4,27,46,.75);
+  color:#fff;
+  font-size:15.5px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.inp:focus{
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(242,180,65,.2);
+}
+textarea.inp{min-height:92px;resize:vertical;line-height:1.45}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:48px;
+  padding:0 22px;
+  border-radius:999px;
+  border:0;
+  font-weight:700;
+  font-size:15.5px;
+  background:var(--gold);
+  color:var(--navy);
+  box-shadow:0 12px 26px -10px rgba(242,180,65,.6);
+  transition:transform .2s var(--ease),opacity .2s,background .2s;
+  text-decoration:none;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.55;pointer-events:none}
+.btn.full{width:100%}
+.btn.sec{
+  background:rgba(255,255,255,.09);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:none;
+}
+.btn.sec:hover{background:rgba(255,255,255,.15)}
+.btn.ok{
+  background:var(--ok);
+  color:#042613;
+  box-shadow:0 12px 26px -10px rgba(34,197,94,.6);
+}
+.btn.danger{
+  background:rgba(239,68,68,.16);
+  color:#fca5a5;
+  border:1px solid rgba(239,68,68,.38);
+  box-shadow:none;
+  min-height:44px;
+  padding:0 14px;
+  font-size:14px;
+}
+.btn.sm{min-height:44px;padding:0 16px;font-size:14px}
+.err-msg{
+  display:none;
+  margin-bottom:14px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:rgba(239,68,68,.18);
+  border:1px solid rgba(239,68,68,.45);
+  color:#fecaca;
+  font-size:14px;
+  font-weight:600;
+}
+.err-msg.on{display:block}
+
+/* APP SHELL */
+.app{display:none;padding-bottom:110px}
+.app.on{display:block}
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:rgba(4,27,46,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:10px 16px;
+}
+.topbar-in{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.tb-left{display:flex;align-items:center;gap:10px}
+.tb-logo{
+  background:#F5F5F3;
+  border-radius:10px;
+  padding:3px 8px;
+  display:inline-flex;
+  align-items:center;
+}
+.tb-logo img{height:30px;width:auto}
+.tb-title b{display:block;font-size:15px;color:#fff;line-height:1.1}
+.tb-title small{font-size:12px;color:var(--gold);font-weight:600}
+.tb-actions{display:flex;align-items:center;gap:8px}
+
+/* NAVIGATION TABS */
+.nav-tabs-wrap{
+  background:rgba(7,43,71,.7);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:61px;
+  z-index:35;
+  backdrop-filter:blur(10px);
+}
+.nav-tabs{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  gap:6px;
+  overflow-x:auto;
+  padding:10px 16px;
+  scrollbar-width:none;
+}
+.nav-tabs::-webkit-scrollbar{display:none}
+.tab-btn{
+  flex:0 0 auto;
+  min-height:44px;
+  padding:0 16px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.05);
+  color:#d5e6f2;
+  font-weight:700;
+  font-size:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  transition:all .2s;
+}
+.tab-btn.active{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:var(--navy);
+  box-shadow:0 8px 20px -8px rgba(242,180,65,.7);
+}
+
+/* MAIN CONTAINER */
+.container{
+  max-width:980px;
+  margin:22px auto 0;
+  padding:0 16px;
+}
+.pane{display:none}
+.pane.active{display:block}
+.sec-head{
+  margin-bottom:18px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.sec-head h2{font-size:26px;color:#fff}
+.sec-head p{font-size:14.5px;color:#a8c5d8;margin-top:2px}
+
+.card{
+  background:rgba(8,38,62,.85);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:20px 18px;
+  margin-bottom:18px;
+  box-shadow:0 18px 36px -20px rgba(0,0,0,.6);
+}
+.card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+  flex-wrap:wrap;
+}
+.card-head h3{font-size:20px;color:var(--gold)}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:680px){
+  .grid2{grid-template-columns:1fr 1fr}
+  .card{padding:24px}
+}
+
+/* TOGGLE SWITCH */
+.switch-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(4,27,46,.65);
+  border:1px solid var(--border);
+  margin-bottom:14px;
+}
+.switch-row span{font-weight:700;font-size:15px}
+.sw{
+  position:relative;
+  width:52px;
+  height:30px;
+  border-radius:99px;
+  background:rgba(255,255,255,.22);
+  border:0;
+  flex:0 0 52px;
+  transition:background .25s;
+}
+.sw::after{
+  content:"";
+  position:absolute;
+  top:3px;
+  left:3px;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#fff;
+  transition:transform .25s var(--ease);
+}
+.sw[aria-checked="true"]{background:var(--gold)}
+.sw[aria-checked="true"]::after{transform:translateX(22px);background:var(--navy)}
+
+/* PHOTO UPLOAD & GALLERY */
+.img-preview-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+.img-thumb{
+  width:110px;
+  height:76px;
+  border-radius:12px;
+  object-fit:cover;
+  border:1px solid var(--border);
+  background:var(--deep);
+}
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:12px;
+  margin-top:10px;
+}
+.photo-item{
+  background:rgba(4,27,46,.75);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:8px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.photo-item img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:10px;
+}
+.photo-item input{
+  font-size:13px;
+  min-height:38px;
+  padding:6px 10px;
+}
+.file-lbl{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:44px;
+  padding:0 16px;
+  border-radius:999px;
+  background:rgba(35,181,198,.18);
+  border:1px solid rgba(35,181,198,.5);
+  color:#99f6e4;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+}
+.file-lbl:hover{background:rgba(35,181,198,.28)}
+.file-lbl input{display:none}
+
+/* STICKY BOTTOM SAVE BAR */
+.savebar{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:50;
+  background:rgba(4,27,46,.95);
+  backdrop-filter:blur(16px);
+  border-top:1px solid rgba(242,180,65,.35);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  box-shadow:0 -12px 30px rgba(0,0,0,.6);
+}
+.savebar-in{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.save-status{
+  font-size:13.5px;
+  color:#b8d0e0;
+  font-weight:600;
+}
+.save-status b{color:var(--gold)}
+
+/* TOAST */
+.toast{
+  position:fixed;
+  right:16px;
+  bottom:90px;
+  z-index:90;
+  background:#052e16;
+  border:1.5px solid #22c55e;
+  color:#dcfce7;
+  padding:12px 18px;
+  border-radius:16px;
+  font-weight:700;
+  font-size:14.5px;
+  box-shadow:0 18px 36px rgba(0,0,0,.65);
+  transform:translateY(24px);
+  opacity:0;
+  pointer-events:none;
+  transition:all .3s var(--ease);
+}
+.toast.on{transform:translateY(0);opacity:1}
+.toast.err{background:#450a0a;border-color:#ef4444;color:#fee2e2}
+</style>
+</head>
+<body>
+
+<!-- TELA DE LOGIN -->
+<main class="login-wrap" id="loginScreen">
+  <form class="login-card" id="loginForm">
+    <div class="login-brand">
+      <img src="/img/logo-oficial.webp" alt="BRAVAMAR" width="140" height="113">
+    </div>
+    <div><span class="login-badge">Painel Administrativo</span></div>
+    <h1>BRAVAMAR Ubatuba</h1>
+    <p>Entre com seu usuário e senha para editar textos, passeios, lanchas, fotos e contatos do site em tempo real.</p>
+    <div class="err-msg" id="loginErr">Usuário ou senha incorretos.</div>
+    <div class="fg">
+      <label for="lUser">Usuário ou E-mail</label>
+      <input class="inp" type="text" id="lUser" name="username" autocomplete="username" placeholder="admin ou bravamar" required>
+    </div>
+    <div class="fg">
+      <label for="lPass">Senha</label>
+      <input class="inp" type="password" id="lPass" name="password" autocomplete="current-password" placeholder="••••••••••••" required>
+    </div>
+    <button type="submit" class="btn full" id="loginBtn">Entrar no Painel →</button>
+    <div style="margin-top:18px">
+      <a href="/" style="color:#9cc2d8;font-size:14px;text-decoration:none;font-weight:600">← Voltar para o site principal</a>
+    </div>
+  </form>
+</main>
+
+<!-- APLICATIVO ADMIN -->
+<div class="app" id="appScreen">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="tb-left">
+        <a href="/" target="_blank" class="tb-logo" title="Abrir site"><img src="/img/logo-oficial.webp" alt="BRAVAMAR"></a>
+        <div class="tb-title">
+          <b>Painel BRAVAMAR</b>
+          <small id="lastUpd">Edição em tempo real</small>
+        </div>
+      </div>
+      <div class="tb-actions">
+        <a href="/" target="_blank" class="btn sec sm">Ver Site ↗</a>
+        <button type="button" class="btn sec sm" id="logoutBtn">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-tabs-wrap" aria-label="Seções do painel">
+    <div class="nav-tabs" id="navTabs">
+      <button type="button" class="tab-btn active" data-tab="hero">1. Topo &amp; Aviso</button>
+      <button type="button" class="tab-btn" data-tab="routes">2. Roteiros &amp; Passeios</button>
+      <button type="button" class="tab-btn" data-tab="boats">3. Lanchas &amp; Fotos</button>
+      <button type="button" class="tab-btn" data-tab="about">4. Sobre &amp; Cadastur</button>
+      <button type="button" class="tab-btn" data-tab="contact">5. Contatos &amp; Redes</button>
+      <button type="button" class="tab-btn" data-tab="faq">6. Perguntas (FAQ)</button>
+      <button type="button" class="tab-btn" data-tab="security">🔒 Senha</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- ABA 1: HERO & AVISO -->
+    <section class="pane active" id="pane-hero">
+      <div class="sec-head">
+        <div>
+          <h2>Textos Principais &amp; Aviso no Topo</h2>
+          <p>Altere a chamada de abertura do site e ative um banner de temporada ou promoção quando quiser.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Banner de Aviso / Temporada (Topo)</h3></div>
+        <div class="switch-row">
+          <span>Exibir faixa de aviso no topo do site</span>
+          <button type="button" class="sw" id="promoEnabled" role="switch" aria-checked="false" aria-label="Ativar aviso no topo"></button>
+        </div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="promoText">Texto do Aviso / Promoção</label>
+            <input class="inp" type="text" id="promoText" placeholder="Ex.: 🌊 Temporada de Verão: Reserve com antecedência!">
+          </div>
+          <div class="fg">
+            <label for="promoCta">Texto do Botão do Aviso</label>
+            <input class="inp" type="text" id="promoCta" placeholder="Ex.: Garantir vaga">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Capa Principal (Hero)</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="hTitleMain">Título Principal (Marca)</label>
+            <input class="inp" type="text" id="hTitleMain">
+          </div>
+          <div class="fg">
+            <label for="hTitleSub">Subtítulo Dourado (H1)</label>
+            <input class="inp" type="text" id="hTitleSub">
+          </div>
+          <div class="fg">
+            <label for="hSub">Frase de Apoio</label>
+            <input class="inp" type="text" id="hSub">
+          </div>
+          <div class="fg">
+            <label for="hCta">Texto do Botão Principal</label>
+            <input class="inp" type="text" id="hCta">
+          </div>
+          <div class="fg">
+            <label for="hBadgeRating">Nota no Selo do Google</label>
+            <input class="inp" type="text" id="hBadgeRating" placeholder="5,0 no Google">
+          </div>
+          <div class="fg">
+            <label for="hBadgeCount">Quantidade de Avaliações</label>
+            <input class="inp" type="text" id="hBadgeCount" placeholder="30 avaliações">
+          </div>
+        </div>
+        <div class="fg">
+          <label for="hPills">Etiquetas de Destaque (uma por linha)</label>
+          <textarea class="inp" id="hPills" rows="3"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 2: ROTEIROS -->
+    <section class="pane" id="pane-routes">
+      <div class="sec-head">
+        <div>
+          <h2>Roteiros &amp; Passeios</h2>
+          <p>Edite títulos, descrições, paradas, observações de almoço, preços e fotos dos cards.</p>
+        </div>
+        <button type="button" class="btn sm" id="addRouteBtn">+ Adicionar Novo Roteiro</button>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Cabeçalho da Seção de Roteiros</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="rSecTitle">Título da Seção</label>
+            <input class="inp" type="text" id="rSecTitle">
+          </div>
+          <div class="fg">
+            <label for="rSecSub">Subtítulo da Seção</label>
+            <input class="inp" type="text" id="rSecSub">
+          </div>
+        </div>
+      </div>
+
+      <div id="routesList"></div>
+    </section>
+
+    <!-- ABA 3: EMBARCAÇÕES / LANCHAS -->
+    <section class="pane" id="pane-boats">
+      <div class="sec-head">
+        <div>
+          <h2>Nossas Embarcações (Frota)</h2>
+          <p>Gerencie o nome, capacidade, itens de estrutura e fotos de cada lancha.</p>
+        </div>
+        <button type="button" class="btn sm" id="addBoatBtn">+ Adicionar Embarcação</button>
+      </div>
+
+      <div id="boatsList"></div>
+    </section>
+
+    <!-- ABA 4: SOBRE NÓS & CADASTUR -->
+    <section class="pane" id="pane-about">
+      <div class="sec-head">
+        <div>
+          <h2>Sobre Nós &amp; Certificado Cadastur</h2>
+          <p>História da família caiçara (Nicolas e Gustavo) e dados de regularização no Ministério do Turismo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>História da Família Caiçara</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="abEyebrow">Selo Acima do Título</label>
+            <input class="inp" type="text" id="abEyebrow">
+          </div>
+          <div class="fg">
+            <label for="abTitle">Título Principal</label>
+            <input class="inp" type="text" id="abTitle">
+          </div>
+        </div>
+        <div class="fg">
+          <label for="abParas">Parágrafos da História (separe cada parágrafo com uma linha em branco)</label>
+          <textarea class="inp" id="abParas" rows="6"></textarea>
+        </div>
+        <div class="fg">
+          <label for="abOffers">Lista "O que oferecemos" (um item por linha)</label>
+          <textarea class="inp" id="abOffers" rows="4"></textarea>
+        </div>
+        <div class="fg">
+          <label for="abQuote">Frase Final em Destaque</label>
+          <textarea class="inp" id="abQuote" rows="2"></textarea>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Certificado Oficial Cadastur</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="cadSeal">Selo de Credibilidade</label>
+            <input class="inp" type="text" id="cadSeal">
+          </div>
+          <div class="fg">
+            <label for="cadAct">Atividade</label>
+            <input class="inp" type="text" id="cadAct">
+          </div>
+          <div class="fg">
+            <label for="cadProv">Prestador / Razão Social</label>
+            <input class="inp" type="text" id="cadProv">
+          </div>
+          <div class="fg">
+            <label for="cadCnpj">Cadastur / CNPJ</label>
+            <input class="inp" type="text" id="cadCnpj">
+          </div>
+          <div class="fg">
+            <label for="cadVal">Validade do Certificado</label>
+            <input class="inp" type="text" id="cadVal">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 5: CONTATOS & REDES -->
+    <section class="pane" id="pane-contact">
+      <div class="sec-head">
+        <div>
+          <h2>Contatos, WhatsApp &amp; Local de Embarque</h2>
+          <p>Estes dados atualizam todos os botões de WhatsApp, simulador, rodapé e seção Como Chegar.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>WhatsApp &amp; Redes Sociais</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="cWaNum">WhatsApp (somente números com DDI 55 e DDD)</label>
+            <input class="inp" type="text" id="cWaNum" placeholder="5512992079031">
+          </div>
+          <div class="fg">
+            <label for="cWaDisp">WhatsApp Formatado (Rodapé)</label>
+            <input class="inp" type="text" id="cWaDisp" placeholder="(12) 99207-9031">
+          </div>
+          <div class="fg">
+            <label for="cIgHandle">Arroba do Instagram</label>
+            <input class="inp" type="text" id="cIgHandle" placeholder="@bravamar.passeiosubatuba">
+          </div>
+          <div class="fg">
+            <label for="cIgUrl">Link Completo do Instagram</label>
+            <input class="inp" type="url" id="cIgUrl">
+          </div>
+          <div class="fg">
+            <label for="cTkHandle">Arroba do TikTok</label>
+            <input class="inp" type="text" id="cTkHandle" placeholder="@bravamar7">
+          </div>
+          <div class="fg">
+            <label for="cTkUrl">Link Completo do TikTok</label>
+            <input class="inp" type="url" id="cTkUrl">
+          </div>
+        </div>
+        <div class="fg">
+          <label for="cDefMsg">Mensagem Padrão do Botão WhatsApp</label>
+          <input class="inp" type="text" id="cDefMsg">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Endereço de Embarque &amp; Horário</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="cLocTitle">Título da Localização</label>
+            <input class="inp" type="text" id="cLocTitle">
+          </div>
+          <div class="fg">
+            <label for="cAddrTitle">Nome da Estrada / Ponto Principal</label>
+            <input class="inp" type="text" id="cAddrTitle">
+          </div>
+          <div class="fg">
+            <label for="cAddr1">Complemento / Praias de Referência</label>
+            <input class="inp" type="text" id="cAddr1">
+          </div>
+          <div class="fg">
+            <label for="cAddr2">Cidade, Estado e CEP</label>
+            <input class="inp" type="text" id="cAddr2">
+          </div>
+          <div class="fg">
+            <label for="cHours">Horário de Atendimento</label>
+            <input class="inp" type="text" id="cHours">
+          </div>
+          <div class="fg">
+            <label for="cMapsUrl">Link do Google Maps</label>
+            <input class="inp" type="url" id="cMapsUrl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABA 6: FAQ -->
+    <section class="pane" id="pane-faq">
+      <div class="sec-head">
+        <div>
+          <h2>Perguntas Frequentes (FAQ)</h2>
+          <p>Edite ou adicione dúvidas comuns dos clientes.</p>
+        </div>
+        <button type="button" class="btn sm" id="addFaqBtn">+ Nova Pergunta</button>
+      </div>
+      <div id="faqList"></div>
+    </section>
+
+    <!-- ABA 7: SEGURANÇA / SENHA -->
+    <section class="pane" id="pane-security">
+      <div class="sec-head">
+        <div>
+          <h2>Segurança &amp; Senha de Acesso</h2>
+          <p>Altere a senha do painel ou restaure os textos originais de fábrica caso precise.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Alterar Senha do Painel</h3></div>
+        <div class="grid2">
+          <div class="fg">
+            <label for="newPass1">Nova Senha</label>
+            <input class="inp" type="password" id="newPass1" placeholder="Mínimo 4 caracteres">
+          </div>
+          <div class="fg">
+            <label for="newPass2">Confirmar Nova Senha</label>
+            <input class="inp" type="password" id="newPass2" placeholder="Repita a nova senha">
+          </div>
+        </div>
+        <button type="button" class="btn sm" id="changePassBtn">Salvar Nova Senha</button>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Restaurar Padrão Inicial</h3></div>
+        <p style="font-size:14.5px;color:#b8d0e0;margin-bottom:14px">Se quiser voltar todos os textos, roteiros e fotos exatamente para a configuração oficial inicial da Bravamar, clique abaixo.</p>
+        <button type="button" class="btn danger" id="resetDefaultBtn">Restaurar Configuração Original</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- BARRA FIXA DE PUBLICAÇÃO -->
+  <div class="savebar">
+    <div class="savebar-in">
+      <div class="save-status" id="saveStatus">Pronto para publicar alterações no site.</div>
+      <button type="button" class="btn ok" id="publishBtn">Publicar Alterações no Site ✓</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var STATE = {
+    user: '',
+    pass: '',
+    data: null
+  };
+
+  var $ = function(s, c){ return (c || document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  function showToast(msg, isErr){
+    var t = $('#toast');
+    t.textContent = msg;
+    t.className = 'toast on' + (isErr ? ' err' : '');
+    clearTimeout(showToast._tm);
+    showToast._tm = setTimeout(function(){ t.className = 'toast'; }, 3800);
+  }
+
+  function escHtml(s){
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;');
+  }
+
+  // Comprime imagem no cliente (WebP/JPEG leve até 1280px) antes de subir
+  function compressImage(file, maxW, quality){
+    maxW = maxW || 1280;
+    quality = quality || 0.84;
+    return new Promise(function(resolve, reject){
+      var reader = new FileReader();
+      reader.onerror = function(){ reject(new Error('Falha ao ler arquivo.')); };
+      reader.onload = function(ev){
+        var img = new Image();
+        img.onerror = function(){ reject(new Error('Imagem inválida.')); };
+        img.onload = function(){
+          var w = img.naturalWidth || img.width;
+          var h = img.naturalHeight || img.height;
+          if (w > maxW) {
+            h = Math.round(h * (maxW / w));
+            w = maxW;
+          }
+          var canvas = document.createElement('canvas');
+          canvas.width = w;
+          canvas.height = h;
+          var ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          var dataUrl = canvas.toDataURL('image/webp', quality);
+          if (dataUrl.indexOf('data:image/webp') !== 0) {
+            dataUrl = canvas.toDataURL('image/jpeg', quality);
+          }
+          resolve(dataUrl);
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function apiCall(payload){
+    var r = await fetch('/api/site-data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-user': STATE.user,
+        'x-admin-pass': STATE.pass
+      },
+      body: JSON.stringify(payload)
+    });
+    var j = await r.json().catch(function(){ return { ok: false, error: 'Erro de comunicação.' }; });
+    if (!r.ok || !j.ok) {
+      throw new Error(j.error || ('Erro HTTP ' + r.status));
+    }
+    return j;
+  }
+
+  async function uploadPhotoFile(file, prefix){
+    showToast('Otimizando e enviando foto...');
+    var dataUrl = await compressImage(file, 1280, 0.84);
+    var res = await apiCall({
+      action: 'upload',
+      filename: prefix || file.name || 'foto',
+      dataUrl: dataUrl
+    });
+    showToast('Foto enviada com sucesso!');
+    return res.url;
+  }
+
+  // Renderiza o estado atual nos campos do formulário
+  function renderAll(){
+    var d = STATE.data || {};
+    var h = d.hero || {};
+    var pb = h.promoBanner || {};
+
+    var sw = $('#promoEnabled');
+    sw.setAttribute('aria-checked', pb.enabled ? 'true' : 'false');
+    $('#promoText').value = pb.text || '';
+    $('#promoCta').value = pb.ctaLabel || 'Garantir vaga';
+
+    $('#hTitleMain').value = h.titleMain || 'BRAVAMAR';
+    $('#hTitleSub').value = h.titleSub || 'Passeios de lancha em Ubatuba';
+    $('#hSub').value = h.subtitle || '';
+    $('#hCta').value = h.ctaText || 'Reservar pelo WhatsApp';
+    $('#hBadgeRating').value = h.badgeRating || '5,0 no Google';
+    $('#hBadgeCount').value = h.badgeCount || '30 avaliações';
+    $('#hPills').value = (h.pills || []).join('\n');
+
+    var rs = d.routesSection || {};
+    $('#rSecTitle').value = rs.title || 'Quatro jeitos de curtir o mar.';
+    $('#rSecSub').value = rs.subtitle || 'Escolha o seu e monte o passeio.';
+
+    renderRoutes();
+    renderBoats();
+
+    var ab = d.about || {};
+    var cad = ab.cadastur || {};
+    $('#abEyebrow').value = ab.eyebrow || '';
+    $('#abTitle').value = ab.title || '';
+    $('#abParas').value = (ab.paragraphs || []).join('\n\n');
+    $('#abOffers').value = (ab.offers || []).join('\n');
+    $('#abQuote').value = ab.quote || '';
+
+    $('#cadSeal').value = cad.seal || '';
+    $('#cadAct').value = cad.activity || '';
+    $('#cadProv').value = cad.provider || '';
+    $('#cadCnpj').value = cad.cnpj || '';
+    $('#cadVal').value = cad.validity || '';
+
+    var c = d.contact || {};
+    $('#cWaNum').value = c.whatsappNumber || '5512992079031';
+    $('#cWaDisp').value = c.whatsappDisplay || '(12) 99207-9031';
+    $('#cIgHandle').value = c.instagramHandle || '@bravamar.passeiosubatuba';
+    $('#cIgUrl').value = c.instagramUrl || 'https://www.instagram.com/bravamar.passeiosubatuba';
+    $('#cTkHandle').value = c.tiktokHandle || '@bravamar7';
+    $('#cTkUrl').value = c.tiktokUrl || 'https://www.tiktok.com/@bravamar7';
+    $('#cDefMsg').value = c.defaultMessage || '';
+    $('#cLocTitle').value = c.locationTitle || '';
+    $('#cAddrTitle').value = c.addressTitle || '';
+    $('#cAddr1').value = c.addressLine1 || '';
+    $('#cAddr2').value = c.addressLine2 || '';
+    $('#cHours').value = c.openingHours || '';
+    $('#cMapsUrl').value = c.mapsUrl || '';
+
+    renderFaq();
+
+    if (d.updatedAt) {
+      try {
+        var dt = new Date(d.updatedAt);
+        $('#lastUpd').textContent = 'Última atualização: ' + dt.toLocaleDateString('pt-BR') + ' às ' + dt.toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'});
+      } catch(e){}
+    }
+  }
+
+  function renderRoutes(){
+    var list = $('#routesList');
+    var routes = (STATE.data && STATE.data.routes) || [];
+    list.innerHTML = '';
+    routes.forEach(function(rt, idx){
+      var card = document.createElement('div');
+      card.className = 'card route-item';
+      card.dataset.idx = idx;
+      var imgSrc = rt.image && rt.image.indexOf('http') !== 0 && rt.image.indexOf('/') !== 0 ? '/' + rt.image : (rt.image || '/img/praia.webp');
+      card.innerHTML =
+        '<div class="card-head">' +
+          '<h3>Roteiro ' + (idx + 1) + ': ' + escHtml(rt.title || 'Novo Roteiro') + '</h3>' +
+          '<button type="button" class="btn danger del-route" data-idx="' + idx + '">Remover Roteiro</button>' +
+        '</div>' +
+        '<div class="grid2">' +
+          '<div class="fg"><label>Título do Card</label><input class="inp r-title" type="text" value="' + escHtml(rt.title) + '"></div>' +
+          '<div class="fg"><label>Selo / Modalidade (Ex.: Compartilhado ou exclusivo, 6 horas · privativo)</label><input class="inp r-badge" type="text" value="' + escHtml(rt.badge) + '"></div>' +
+          '<div class="fg"><label>Nome na Aba do Mapa</label><input class="inp r-tab" type="text" value="' + escHtml(rt.tabLabel || rt.title) + '"></div>' +
+          '<div class="fg"><label>Nome no Simulador</label><input class="inp r-sim" type="text" value="' + escHtml(rt.simLabel || rt.title) + '"></div>' +
+        '</div>' +
+        '<div class="fg"><label>Descrição Curta</label><textarea class="inp r-desc" rows="2">' + escHtml(rt.description) + '</textarea></div>' +
+        '<div class="fg"><label>Paradas do Roteiro (uma parada por linha)</label><textarea class="inp r-stops" rows="5">' + escHtml((rt.stops || []).join('\n')) + '</textarea></div>' +
+        '<div class="fg"><label>Observação de Destaque / Almoço / Parada Especial</label><input class="inp r-note" type="text" value="' + escHtml(rt.specialNote) + '"></div>' +
+        '<div class="grid2">' +
+          '<div class="fg">' +
+            '<label>Exibir Preço no Card?</label>' +
+            '<select class="inp r-showprice">' +
+              '<option value="false"' + (!rt.showPrice ? ' selected' : '') + '>Ocultar preço (Sob consulta no WhatsApp)</option>' +
+              '<option value="true"' + (rt.showPrice ? ' selected' : '') + '>Exibir preço / valor no card</option>' +
+            '</select>' +
+          '</div>' +
+          '<div class="fg"><label>Texto de Preço (ex.: A partir de R$ 150 ou Sob consulta)</label><input class="inp r-price" type="text" value="' + escHtml(rt.priceText || 'Sob consulta') + '"></div>' +
+        '</div>' +
+        '<div class="fg">' +
+          '<label>Foto do Card</label>' +
+          '<div class="img-preview-row">' +
+            '<img class="img-thumb r-img-prev" src="' + escHtml(imgSrc) + '" alt="Foto do roteiro">' +
+            '<div style="flex:1;min-width:200px">' +
+              '<input class="inp r-img" type="text" value="' + escHtml(rt.image) + '" placeholder="Caminho ou URL da foto" style="margin-bottom:8px">' +
+              '<label class="file-lbl">📷 Enviar Foto do Celular/PC<input type="file" accept="image/*" class="r-file" data-idx="' + idx + '"></label>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      list.appendChild(card);
+    });
+
+    $$('.del-route', list).forEach(function(btn){
+      btn.onclick = function(){
+        var i = +btn.dataset.idx;
+        collectFormData();
+        STATE.data.routes.splice(i, 1);
+        renderRoutes();
+      };
+    });
+
+    $$('.r-file', list).forEach(function(inp){
+      inp.onchange = async function(){
+        var file = inp.files && inp.files[0];
+        if (!file) return;
+        var i = +inp.dataset.idx;
+        try {
+          collectFormData();
+          var url = await uploadPhotoFile(file, 'roteiro-' + (i + 1));
+          STATE.data.routes[i].image = url;
+          renderRoutes();
+        } catch(err){
+          showToast(err.message, true);
+        }
+      };
+    });
+  }
+
+  function renderBoats(){
+    var list = $('#boatsList');
+    var boats = (STATE.data && STATE.data.boats) || [];
+    list.innerHTML = '';
+    boats.forEach(function(bt, idx){
+      var card = document.createElement('div');
+      card.className = 'card boat-item';
+      card.dataset.idx = idx;
+
+      var photosHtml = (bt.photos || []).map(function(ph, pIdx){
+        var pSrc = ph.src && ph.src.indexOf('http') !== 0 && ph.src.indexOf('/') !== 0 ? '/' + ph.src : (ph.src || '');
+        return '<div class="photo-item" data-pidx="' + pIdx + '">' +
+          '<img src="' + escHtml(pSrc) + '" alt="' + escHtml(ph.caption) + '">' +
+          '<input class="inp b-ph-cap" type="text" value="' + escHtml(ph.caption || '') + '" placeholder="Legenda da foto">' +
+          '<input type="hidden" class="b-ph-src" value="' + escHtml(ph.src || '') + '">' +
+          '<input type="hidden" class="b-ph-thumb" value="' + escHtml(ph.thumb || ph.src || '') + '">' +
+          '<button type="button" class="btn danger del-boat-photo" data-bidx="' + idx + '" data-pidx="' + pIdx + '">Remover</button>' +
+        '</div>';
+      }).join('');
+
+      card.innerHTML =
+        '<div class="card-head">' +
+          '<h3>Embarcação ' + (idx + 1) + ': ' + escHtml(bt.name || 'Nova Lancha') + '</h3>' +
+          '<button type="button" class="btn danger del-boat" data-idx="' + idx + '">Remover Lancha</button>' +
+        '</div>' +
+        '<div class="grid2">' +
+          '<div class="fg"><label>Nome da Embarcação</label><input class="inp b-name" type="text" value="' + escHtml(bt.name) + '"></div>' +
+          '<div class="fg"><label>Capacidade Máxima (número de pessoas)</label><input class="inp b-cap" type="number" min="1" max="100" value="' + escHtml(bt.capacity || 12) + '"></div>' +
+          '<div class="fg"><label>Selo de Capacidade (Ex.: 12 pessoas)</label><input class="inp b-badge" type="text" value="' + escHtml(bt.capacityBadge || ((bt.capacity || 12) + ' pessoas')) + '"></div>' +
+          '<div class="fg"><label>Texto no Simulador</label><input class="inp b-sim" type="text" value="' + escHtml(bt.simLabel || (bt.name + ' · até ' + (bt.capacity || 12) + ' pessoas')) + '"></div>' +
+        '</div>' +
+        '<div class="fg"><label>Descrição / Uso da Lancha (opcional)</label><input class="inp b-desc" type="text" value="' + escHtml(bt.description || '') + '" placeholder="Ex.: Usada para Táxi-Boat e pequenos roteiros."></div>' +
+        '<div class="fg"><label>Itens a Bordo / Estrutura (um item por linha)</label><textarea class="inp b-feats" rows="5">' + escHtml((bt.features || []).join('\n')) + '</textarea></div>' +
+        '<div class="fg">' +
+          '<label>Fotos da Embarcação (' + (bt.photos ? bt.photos.length : 0) + ' fotos)</label>' +
+          '<div class="photo-grid">' + photosHtml + '</div>' +
+          '<div style="margin-top:12px">' +
+            '<label class="file-lbl">📷 + Adicionar Nova Foto da Lancha<input type="file" accept="image/*" class="b-add-photo" data-idx="' + idx + '"></label>' +
+          '</div>' +
+        '</div>';
+
+      list.appendChild(card);
+    });
+
+    $$('.del-boat', list).forEach(function(btn){
+      btn.onclick = function(){
+        var i = +btn.dataset.idx;
+        collectFormData();
+        STATE.data.boats.splice(i, 1);
+        renderBoats();
+      };
+    });
+
+    $$('.del-boat-photo', list).forEach(function(btn){
+      btn.onclick = function(){
+        var bIdx = +btn.dataset.bidx;
+        var pIdx = +btn.dataset.pidx;
+        collectFormData();
+        STATE.data.boats[bIdx].photos.splice(pIdx, 1);
+        renderBoats();
+      };
+    });
+
+    $$('.b-add-photo', list).forEach(function(inp){
+      inp.onchange = async function(){
+        var file = inp.files && inp.files[0];
+        if (!file) return;
+        var bIdx = +inp.dataset.idx;
+        try {
+          collectFormData();
+          var url = await uploadPhotoFile(file, 'lancha-' + (bIdx + 1));
+          STATE.data.boats[bIdx].photos.push({
+            src: url,
+            thumb: url,
+            caption: STATE.data.boats[bIdx].name || 'Foto da lancha'
+          });
+          renderBoats();
+        } catch(err){
+          showToast(err.message, true);
+        }
+      };
+    });
+  }
+
+  function renderFaq(){
+    var list = $('#faqList');
+    var faqs = (STATE.data && STATE.data.faq) || [];
+    list.innerHTML = '';
+    faqs.forEach(function(item, idx){
+      var card = document.createElement('div');
+      card.className = 'card faq-item';
+      card.innerHTML =
+        '<div class="card-head">' +
+          '<h3>Pergunta ' + (idx + 1) + '</h3>' +
+          '<button type="button" class="btn danger del-faq" data-idx="' + idx + '">Remover</button>' +
+        '</div>' +
+        '<div class="fg"><label>Pergunta</label><input class="inp f-q" type="text" value="' + escHtml(item.q) + '"></div>' +
+        '<div class="fg"><label>Resposta</label><textarea class="inp f-a" rows="2">' + escHtml(item.a) + '</textarea></div>';
+      list.appendChild(card);
+    });
+
+    $$('.del-faq', list).forEach(function(btn){
+      btn.onclick = function(){
+        var i = +btn.dataset.idx;
+        collectFormData();
+        STATE.data.faq.splice(i, 1);
+        renderFaq();
+      };
+    });
+  }
+
+  function splitLines(txt){
+    return String(txt || '').split(/\r?\n/).map(function(s){ return s.trim(); }).filter(Boolean);
+  }
+
+  function collectFormData(){
+    if (!STATE.data) STATE.data = {};
+    var d = STATE.data;
+
+    d.hero = {
+      badgeRating: $('#hBadgeRating').value.trim(),
+      badgeCount: $('#hBadgeCount').value.trim(),
+      titleMain: $('#hTitleMain').value.trim(),
+      titleSub: $('#hTitleSub').value.trim(),
+      subtitle: $('#hSub').value.trim(),
+      ctaText: $('#hCta').value.trim(),
+      pills: splitLines($('#hPills').value),
+      promoBanner: {
+        enabled: $('#promoEnabled').getAttribute('aria-checked') === 'true',
+        text: $('#promoText').value.trim(),
+        ctaLabel: $('#promoCta').value.trim() || 'Reservar agora'
+      }
+    };
+
+    d.routesSection = {
+      eyebrow: (d.routesSection && d.routesSection.eyebrow) || 'Roteiros & serviços',
+      title: $('#rSecTitle').value.trim(),
+      subtitle: $('#rSecSub').value.trim()
+    };
+
+    d.routes = $$('.route-item').map(function(card, idx){
+      var prev = (d.routes && d.routes[idx]) || {};
+      var title = $('.r-title', card).value.trim();
+      return {
+        id: prev.id || ('rt' + (idx + 1)),
+        tabLabel: $('.r-tab', card).value.trim() || title,
+        title: title,
+        badge: $('.r-badge', card).value.trim(),
+        description: $('.r-desc', card).value.trim(),
+        stops: splitLines($('.r-stops', card).value),
+        specialNote: $('.r-note', card).value.trim(),
+        image: $('.r-img', card).value.trim(),
+        imageAlt: prev.imageAlt || title,
+        showPrice: $('.r-showprice', card).value === 'true',
+        priceText: $('.r-price', card).value.trim(),
+        simLabel: $('.r-sim', card).value.trim() || title
+      };
+    });
+
+    d.boats = $$('.boat-item').map(function(card, idx){
+      var prev = (d.boats && d.boats[idx]) || {};
+      var name = $('.b-name', card).value.trim();
+      var cap = parseInt($('.b-cap', card).value, 10) || 12;
+      var photos = $$('.photo-item', card).map(function(pEl){
+        var src = $('.b-ph-src', pEl).value.trim();
+        var thumb = $('.b-ph-thumb', pEl).value.trim() || src;
+        return {
+          src: src,
+          thumb: thumb,
+          caption: $('.b-ph-cap', pEl).value.trim() || name
+        };
+      });
+      return {
+        id: prev.id || ('b' + (idx + 1)),
+        name: name,
+        capacity: cap,
+        capacityBadge: $('.b-badge', card).value.trim() || (cap + ' pessoas'),
+        description: $('.b-desc', card).value.trim(),
+        simLabel: $('.b-sim', card).value.trim() || (name + ' · até ' + cap + ' pessoas'),
+        features: splitLines($('.b-feats', card).value),
+        photos: photos
+      };
+    });
+
+    var paras = String($('#abParas').value || '').split(/\r?\n\s*\r?\n/).map(function(s){ return s.trim(); }).filter(Boolean);
+    d.about = {
+      eyebrow: $('#abEyebrow').value.trim(),
+      title: $('#abTitle').value.trim(),
+      paragraphs: paras,
+      offersTitle: 'O que oferecemos',
+      offers: splitLines($('#abOffers').value),
+      quote: $('#abQuote').value.trim(),
+      cadastur: {
+        seal: $('#cadSeal').value.trim(),
+        image: (d.about && d.about.cadastur && d.about.cadastur.image) || 'img/cadastur-certificado.webp',
+        activity: $('#cadAct').value.trim(),
+        provider: $('#cadProv').value.trim(),
+        cnpj: $('#cadCnpj').value.trim(),
+        validity: $('#cadVal').value.trim()
+      }
+    };
+
+    d.contact = {
+      whatsappNumber: $('#cWaNum').value.trim().replace(/\D/g, ''),
+      whatsappDisplay: $('#cWaDisp').value.trim(),
+      defaultMessage: $('#cDefMsg').value.trim(),
+      instagramHandle: $('#cIgHandle').value.trim(),
+      instagramUrl: $('#cIgUrl').value.trim(),
+      tiktokHandle: $('#cTkHandle').value.trim(),
+      tiktokUrl: $('#cTkUrl').value.trim(),
+      mapsUrl: $('#cMapsUrl').value.trim(),
+      wazeUrl: (d.contact && d.contact.wazeUrl) || 'https://waze.com/ul?ll=-23.5059628,-45.1160084&navigate=yes',
+      locationTitle: $('#cLocTitle').value.trim(),
+      addressTitle: $('#cAddrTitle').value.trim(),
+      addressLine1: $('#cAddr1').value.trim(),
+      addressLine2: $('#cAddr2').value.trim(),
+      openingHours: $('#cHours').value.trim()
+    };
+
+    d.faq = $$('.faq-item').map(function(card){
+      return {
+        q: $('.f-q', card).value.trim(),
+        a: $('.f-a', card).value.trim()
+      };
+    }).filter(function(item){ return item.q && item.a; });
+
+    return d;
+  }
+
+  // Eventos de UI
+  $('#promoEnabled').onclick = function(){
+    var cur = this.getAttribute('aria-checked') === 'true';
+    this.setAttribute('aria-checked', cur ? 'false' : 'true');
+  };
+
+  $$('#navTabs .tab-btn').forEach(function(btn){
+    btn.onclick = function(){
+      $$('#navTabs .tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      $$('.pane').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      var pane = $('#pane-' + btn.dataset.tab);
+      if (pane) pane.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  });
+
+  $('#addRouteBtn').onclick = function(){
+    collectFormData();
+    STATE.data.routes.push({
+      id: 'rt_' + Date.now(),
+      tabLabel: 'Novo Roteiro',
+      title: 'Novo Roteiro',
+      badge: 'Exclusivo',
+      description: 'Descreva o passeio aqui.',
+      stops: ['Parada 1', 'Parada 2'],
+      specialNote: '📍 Parada especial para mergulho',
+      image: 'img/praia.webp',
+      showPrice: false,
+      priceText: 'Sob consulta',
+      simLabel: 'Novo Roteiro'
+    });
+    renderRoutes();
+    showToast('Novo roteiro adicionado! Edite e clique em Publicar.');
+  };
+
+  $('#addBoatBtn').onclick = function(){
+    collectFormData();
+    STATE.data.boats.push({
+      id: 'bt_' + Date.now(),
+      name: 'Nova Embarcação',
+      capacity: 8,
+      capacityBadge: '8 pessoas',
+      description: 'Passeios privativos.',
+      simLabel: 'Nova Embarcação · até 8 pessoas',
+      features: ['8 pessoas', 'Som com Bluetooth', 'Cooler', 'Coletes salva-vidas'],
+      photos: [{ src: 'img/frota-12p-3.webp', thumb: 'img/frota-12p-3-640.webp', caption: 'Nova Embarcação' }]
+    });
+    renderBoats();
+    showToast('Nova embarcação adicionada!');
+  };
+
+  $('#addFaqBtn').onclick = function(){
+    collectFormData();
+    STATE.data.faq.push({
+      q: 'Nova pergunta frequente?',
+      a: 'Digite a resposta aqui.'
+    });
+    renderFaq();
+  };
+
+  $('#publishBtn').onclick = async function(){
+    var btn = this;
+    btn.disabled = true;
+    $('#saveStatus').innerHTML = '<b>Publicando alterações no site...</b>';
+    try {
+      var payloadData = collectFormData();
+      var res = await apiCall({
+        action: 'save',
+        data: payloadData
+      });
+      STATE.data = res.data || payloadData;
+      renderAll();
+      $('#saveStatus').innerHTML = '✓ <b>Publicado no ar!</b> Todos os visitantes já veem a nova versão.';
+      showToast('Alterações publicadas no site com sucesso!');
+    } catch(err){
+      $('#saveStatus').textContent = 'Erro ao salvar: ' + err.message;
+      showToast(err.message, true);
+    } finally {
+      btn.disabled = false;
+    }
+  };
+
+  $('#changePassBtn').onclick = async function(){
+    var p1 = $('#newPass1').value.trim();
+    var p2 = $('#newPass2').value.trim();
+    if (p1.length < 4) return showToast('A senha deve ter pelo menos 4 caracteres.', true);
+    if (p1 !== p2) return showToast('As senhas não conferem.', true);
+    try {
+      await apiCall({ action: 'change-password', newPassword: p1 });
+      STATE.pass = p1;
+      sessionStorage.setItem('bm_admin_pass', p1);
+      $('#newPass1').value = '';
+      $('#newPass2').value = '';
+      showToast('Senha alterada com sucesso!');
+    } catch(err){
+      showToast(err.message, true);
+    }
+  };
+
+  $('#resetDefaultBtn').onclick = async function(){
+    if (!confirm('Tem certeza que deseja restaurar todos os textos e roteiros para o padrão original de fábrica?')) return;
+    try {
+      var res = await apiCall({ action: 'reset-default' });
+      STATE.data = res.data;
+      renderAll();
+      showToast('Dados originais restaurados com sucesso!');
+    } catch(err){
+      showToast(err.message, true);
+    }
+  };
+
+  $('#loginForm').onsubmit = async function(ev){
+    ev.preventDefault();
+    var u = $('#lUser').value.trim();
+    var p = $('#lPass').value.trim();
+    var btn = $('#loginBtn');
+    var errBox = $('#loginErr');
+    errBox.classList.remove('on');
+    btn.disabled = true;
+    btn.textContent = 'Verificando...';
+    try {
+      STATE.user = u;
+      STATE.pass = p;
+      var res = await apiCall({ action: 'login', user: u, password: p });
+      STATE.data = res.data;
+      sessionStorage.setItem('bm_admin_user', u);
+      sessionStorage.setItem('bm_admin_pass', p);
+      $('#loginScreen').style.display = 'none';
+      $('#appScreen').classList.add('on');
+      renderAll();
+      showToast('Bem-vindo ao painel da Bravamar!');
+    } catch(err){
+      errBox.textContent = err.message || 'Usuário ou senha inválidos.';
+      errBox.classList.add('on');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Entrar no Painel →';
+    }
+  };
+
+  $('#logoutBtn').onclick = function(){
+    sessionStorage.removeItem('bm_admin_user');
+    sessionStorage.removeItem('bm_admin_pass');
+    STATE.user = '';
+    STATE.pass = '';
+    $('#appScreen').classList.remove('on');
+    $('#loginScreen').style.display = 'flex';
+  };
+
+  // Auto-login se já estiver na sessão
+  var su = sessionStorage.getItem('bm_admin_user');
+  var sp = sessionStorage.getItem('bm_admin_pass');
+  if (su && sp) {
+    $('#lUser').value = su;
+    $('#lPass').value = sp;
+    $('#loginForm').dispatchEvent(new Event('submit'));
+  }
+})();
+</script>
+</body>
+</html>
