@@ -1349,8 +1349,10 @@ textarea.inp{min-height:92px;resize:vertical;line-height:1.45}
   $('#resetDefaultBtn').onclick = async function(){
     if (!confirm('Tem certeza que deseja restaurar todos os textos e roteiros para o padrão original de fábrica?')) return;
     try {
-      var res = await apiCall({ action: 'reset-default' });
-      STATE.data = res.data;
+      var rDef = await fetch('/data/site-data.json?t=' + Date.now(), { cache: 'no-store' });
+      var defData = await rDef.json();
+      var res = await apiCall({ action: 'save', data: defData });
+      STATE.data = res.data || defData;
       renderAll();
       showToast('Dados originais restaurados com sucesso!');
     } catch(err){
