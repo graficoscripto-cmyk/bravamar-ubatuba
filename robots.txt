@@ -1,23 +1,63 @@
+# robots.txt — BRAVAMAR Passeios de lancha em Ubatuba (Ubatuba - SP)
+# Otimizado para Google, Bing, motores de busca por IA (GEO/AEO) e Agentes (RFC 9309 + Content-Signal)
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+# Crawlers de Busca e IA (Permitidos explicitamente para citacao e recomendacao)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
 Allow: /
-User-agent: OAI-SearchBot
-Allow: /
-User-agent: ChatGPT-User
-Allow: /
-User-agent: ClaudeBot
-Allow: /
-User-agent: Claude-SearchBot
-Allow: /
+
 User-agent: PerplexityBot
 Allow: /
-User-agent: Google-Extended
+
+User-agent: Perplexity-User
 Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://bravamar-ubatuba.vercel.app/sitemap.xml
+Sitemap: https://www.bravamarubatuba.com.br/sitemap.xml

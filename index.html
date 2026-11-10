@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BRAVAMAR Passeios de lancha em Ubatuba | Aventura sobre as ondas</title>
-<meta name="description" content="Passeio de lancha em Ubatuba com a BRAVAMAR: lancha nova, praias de água calma (Flamengo, Sete Fontes e Ilha Anchieta), churrasco a bordo e o comandante Nicolas. ★ 5,0 no Google (30 avaliações).">
+<meta name="description" content="Passeios de lancha em Ubatuba: Rota Sete Fontes, Ilha Anchieta (6h e 2h) e Táxi-Boat. Empresa familiar caiçara, Cadastur. ★ 5,0 no Google (30 avaliações).">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="geo.region" content="BR-SP">
 <meta name="geo.placename" content="Ubatuba, SP">
@@ -14,10 +14,11 @@
 <link rel="alternate" type="text/markdown" href="https://www.bravamarubatuba.com.br/llms.txt" title="BRAVAMAR Passeios de lancha em Ubatuba — Guia para IA (LLM)">
 <meta name="theme-color" content="#072B47">
 <meta name="google-site-verification" content="SmBYSTITMKihP2rreKsGBbnNBP9MiUYiPZ-_mLJubmU">
+<meta name="google-site-verification" content="46baf8R93ED-6ZqsQ5hKWQ2nIAp24-Ics-uDAaOWovI">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BRAVAMAR Passeios de lancha em Ubatuba">
 <meta property="og:title" content="BRAVAMAR Passeios de lancha em Ubatuba | Aventura sobre as ondas">
-<meta property="og:description" content="Lancha nova, praias de água calma e churrasco a bordo saindo do Saco da Ribeira em Ubatuba. ★ 5,0 no Google · 30 avaliações.">
+<meta property="og:description" content="Rota Sete Fontes, Ilha Anchieta e Táxi-Boat em Ubatuba. Empresa familiar caiçara, Cadastur. ★ 5,0 no Google · 30 avaliações.">
 <meta property="og:image" content="https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Lancha BRAVAMAR em águas turquesa de Ubatuba">
@@ -25,7 +26,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BRAVAMAR Passeios de lancha em Ubatuba">
-<meta name="twitter:description" content="Lancha nova, praias de água calma e churrasco a bordo em Ubatuba. ★ 5,0 no Google.">
+<meta name="twitter:description" content="Rota Sete Fontes, Ilha Anchieta e Táxi-Boat em Ubatuba. ★ 5,0 no Google.">
 <meta name="twitter:image" content="https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
@@ -262,25 +263,61 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
  .mapf{margin-top:0;aspect-ratio:1/1}
 }
 @media(min-width:1000px){.wv{height:90px}.rota .wv{height:100px}}
+
+/* ===== v3 roteiros reais, frota, sobre ===== */
+.rtabs{margin:6px 0 4px}
+.rtabs button{min-height:46px}
+.rcards{display:grid;gap:18px;margin-top:30px}
+.rc{background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 26px 44px -26px rgba(7,43,71,.55);display:flex;flex-direction:column}
+.rc .ph{aspect-ratio:16/10;overflow:hidden;background:var(--navy)}
+.rc .ph img{display:block;width:100%;height:100%;object-fit:cover}
+.rc .bd{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.rc .badge{align-self:flex-start;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:6px 12px;border-radius:999px}
+.rc h3{font:400 26px/1.1 'Young Serif',serif;color:var(--navy)}
+.rc .one{font-size:16px;color:#274459}
+.stp{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:2px 0}
+.stp li{font-size:14px;font-weight:600;color:var(--teal-dd);background:var(--sand);border:1px solid var(--sand2);border-radius:999px;padding:7px 12px;line-height:1.2}
+.rc .sp{font-size:14.5px;font-weight:600;color:var(--navy);background:rgba(242,180,65,.2);border-radius:14px;padding:10px 12px}
+.pick{margin-top:auto;min-height:48px;border-radius:999px;border:0;background:var(--navy);color:#fff;font-weight:700;font-size:15px;padding:0 20px;cursor:pointer;transition:transform .2s var(--ease),background .3s}
+.pick:hover{background:var(--teal-d)}.pick:active{transform:scale(.97)}
+.boat{margin-top:44px}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.bh h3{font:400 30px/1.05 'Young Serif',serif;color:#fff}
+.bh p{flex-basis:100%;opacity:.85}
+.cp{font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--navy);padding:7px 13px;border-radius:999px}
+.boat .car{padding-top:18px}
+.boat .feats{margin-top:6px}
+.boat .stop{aspect-ratio:3/4}
+.sobre{background:var(--sand);color:var(--ink)}
+.sobre .cols{display:grid;gap:34px}
+.sbp{font-size:17px;line-height:1.55;margin-top:14px;color:#1d3b52}
+.sbh{font:400 22px 'Young Serif',serif;margin:26px 0 8px;color:var(--navy)}
+.sbl{list-style:none;display:grid;gap:8px}
+.sbl li{position:relative;padding-left:26px;font-weight:600}
+.sbl li::before{content:"";position:absolute;left:2px;top:.5em;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(242,180,65,.25)}
+.sbq{margin-top:22px;padding:18px 20px;border-radius:20px;background:var(--navy);color:#fff;font:400 19px/1.35 'Young Serif',serif}
+.cad{background:#fff;border-radius:28px;padding:18px;box-shadow:0 30px 50px -28px rgba(7,43,71,.6);align-self:start}
+.seal2{display:inline-block;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:linear-gradient(120deg,#0F7A87,#1695A3);padding:9px 14px;border-radius:999px;margin-bottom:14px}
+.cadimg{position:relative;display:block;width:100%;border:0;padding:0;border-radius:18px;overflow:hidden;background:#2b86c4}
+.cadimg img{display:block;width:100%;height:auto}
+.cadimg span{position:absolute;right:10px;bottom:10px;background:rgba(4,27,46,.75);color:#fff;font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px}
+.cad dl{display:grid;gap:10px;margin:16px 0}
+.cad dl div{display:flex;flex-direction:column;border-bottom:1px solid var(--sand2);padding-bottom:8px}
+.cad dt{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.cad dd{font-weight:700;color:var(--navy)}
+.cad .btn{display:inline-flex}
+.capn{display:block;opacity:.8;font-size:14px;padding:0 4px}
+@media(min-width:720px){
+ .rcards{grid-template-columns:1fr 1fr;gap:24px}
+ .sobre .cols{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+ .boat .stop{flex-basis:300px}
+}
+@media(min-width:1000px){.boat .car{overflow:visible;flex-wrap:wrap}.boat .stop{flex:0 0 calc(20% - 13px);max-width:none}#b5 .stop{flex-basis:calc(25% - 12px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1}}
 </style>
 <noscript><style>.js .rv{opacity:1}</style></noscript>
 <script>document.documentElement.classList.add('js')</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"WebSite","@id":"https://www.bravamarubatuba.com.br/#website","url":"https://www.bravamarubatuba.com.br/","name":"BRAVAMAR Passeios de lancha em Ubatuba","inLanguage":"pt-BR","publisher":{"@id":"https://www.bravamarubatuba.com.br/#negocio"}},
-{"@type":"WebPage","@id":"https://www.bravamarubatuba.com.br/#webpage","url":"https://www.bravamarubatuba.com.br/","name":"BRAVAMAR Passeios de lancha em Ubatuba","isPartOf":{"@id":"https://www.bravamarubatuba.com.br/#website"},"about":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg","width":1200,"height":630},"breadcrumb":{"@id":"https://www.bravamarubatuba.com.br/#breadcrumb"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lead"]},"inLanguage":"pt-BR"},
-{"@type":"BreadcrumbList","@id":"https://www.bravamarubatuba.com.br/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.bravamarubatuba.com.br/"},{"@type":"ListItem","position":2,"name":"Passeios de lancha em Ubatuba","item":"https://www.bravamarubatuba.com.br/#roteiros"}]},
-{"@type":["LocalBusiness","TravelAgency","BoatTrip"],"@id":"https://www.bravamarubatuba.com.br/#negocio","name":"BRAVAMAR Passeios de lancha em Ubatuba","alternateName":"BRAVAMAR — Aventura sobre as ondas","description":"Passeios privativos de lancha em Ubatuba, SP, saindo do Saco da Ribeira, com lancha nova, churrasco a bordo, praias de água calma (Flamengo, Sete Fontes e Ilha Anchieta) e o comandante Nicolas.","url":"https://www.bravamarubatuba.com.br/","telephone":"+55-12-99207-9031","image":["https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg","https://www.bravamarubatuba.com.br/img/hero-1180.webp","https://www.bravamarubatuba.com.br/img/churrasco.webp"],"logo":"https://www.bravamarubatuba.com.br/img/logo-oficial.webp","slogan":"Aventura sobre as ondas","address":{"@type":"PostalAddress","streetAddress":"Estrada da Ribeira · Flamengo / Praias da Ribeira e Sete Fontes","addressLocality":"Ubatuba","addressRegion":"SP","postalCode":"11680-000","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-23.5059628,"longitude":-45.1160084},"hasMap":"https://www.google.com/maps/place/?q=place_id:ChIJu_g2IcAdZ40Rsn1jinAGVao","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"17:00"}],"areaServed":[{"@type":"City","name":"Ubatuba"},{"@type":"Place","name":"Saco da Ribeira, Ubatuba"},{"@type":"Place","name":"Praia do Flamengo, Ubatuba"},{"@type":"Place","name":"Praia das Sete Fontes, Ubatuba"},{"@type":"Place","name":"Ilha Anchieta, Ubatuba"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","bestRating":"5","reviewCount":"30"},"sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJu_g2IcAdZ40Rsn1jinAGVao","https://www.google.com/maps/place/BRAVAMAR+Passeios+de+lancha+em+Ubatuba/@-23.5059628,-45.1160084,17z","https://www.instagram.com/bravamar.passeiosubatuba","https://www.tiktok.com/@bravamar7","https://www.facebook.com/passeiosbravamar/"],"potentialAction":{"@type":"ReserveAction","target":"https://www.bravamarubatuba.com.br/#monte","name":"Montar passeio e reservar pelo WhatsApp"},"makesOffer":{"@type":"Offer","itemOffered":{"@id":"https://www.bravamarubatuba.com.br/#passeio"}}},
-{"@type":"TouristTrip","@id":"https://www.bravamarubatuba.com.br/#passeio","name":"Passeio de lancha privativo em Ubatuba","description":"Passeio privativo de lancha saindo do Saco da Ribeira, com paradas em praias de água calma (Flamengo, Sete Fontes e Ilha Anchieta) e churrasco a bordo.","touristType":"Famílias e grupos de amigos","provider":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"itinerary":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Place","name":"Saco da Ribeira"}},{"@type":"ListItem","position":2,"item":{"@type":"Place","name":"Praia do Flamengo"}},{"@type":"ListItem","position":3,"item":{"@type":"Place","name":"Praia das Sete Fontes"}},{"@type":"ListItem","position":4,"item":{"@type":"Place","name":"Ilha Anchieta"}}]}},
-{"@type":"FAQPage","@id":"https://www.bravamarubatuba.com.br/#faq","mainEntity":[
-{"@type":"Question","name":"Onde é o embarque?","acceptedAnswer":{"@type":"Answer","text":"Estrada da Ribeira, entre o Flamengo e as praias da Ribeira e Sete Fontes, em Ubatuba (SP)."}},
-{"@type":"Question","name":"Dá para ter churrasco a bordo?","acceptedAnswer":{"@type":"Answer","text":"Sim. Marque a opção no simulador ou avise pelo WhatsApp que a equipe organiza."}},
-{"@type":"Question","name":"Quanto custa e quais os horários?","acceptedAnswer":{"@type":"Answer","text":"Valores e horários são passados pelo WhatsApp, de acordo com roteiro, data e número de pessoas."}},
-{"@type":"Question","name":"A lancha é segura?","acceptedAnswer":{"@type":"Answer","text":"Clientes relatam lancha nova, com itens de segurança e conforto. A equipe é liderada pelo comandante Nicolas."}},
-{"@type":"Question","name":"Posso levar crianças?","acceptedAnswer":{"@type":"Answer","text":"Informe quantos adultos e crianças no simulador e a equipe confirma os detalhes pelo WhatsApp."}}]}
-]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.bravamarubatuba.com.br/#website","url":"https://www.bravamarubatuba.com.br/","name":"BRAVAMAR Passeios de lancha em Ubatuba","inLanguage":"pt-BR","publisher":{"@id":"https://www.bravamarubatuba.com.br/#negocio"}},{"@type":"WebPage","@id":"https://www.bravamarubatuba.com.br/#webpage","url":"https://www.bravamarubatuba.com.br/","name":"BRAVAMAR Passeios de lancha em Ubatuba","isPartOf":{"@id":"https://www.bravamarubatuba.com.br/#website"},"about":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg","width":1200,"height":630},"breadcrumb":{"@id":"https://www.bravamarubatuba.com.br/#breadcrumb"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".lead"]},"inLanguage":"pt-BR"},{"@type":"BreadcrumbList","@id":"https://www.bravamarubatuba.com.br/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.bravamarubatuba.com.br/"},{"@type":"ListItem","position":2,"name":"Passeios de lancha em Ubatuba","item":"https://www.bravamarubatuba.com.br/#roteiros"}]},{"@type":["LocalBusiness","TravelAgency","BoatTrip"],"@id":"https://www.bravamarubatuba.com.br/#negocio","name":"BRAVAMAR Passeios de lancha em Ubatuba","alternateName":"BRAVAMAR — Aventura sobre as ondas","description":"Empresa familiar caiçara de passeios de lancha em Ubatuba (SP): Rota Sete Fontes, passeios à Ilha Anchieta (6h privativo e 2h panorâmico) e Táxi-Boat. Cadastur 27.937.567/0001-45.","url":"https://www.bravamarubatuba.com.br/","telephone":"+55-12-99207-9031","image":["https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg","https://www.bravamarubatuba.com.br/img/hero-1180.webp","https://www.bravamarubatuba.com.br/img/churrasco.webp"],"logo":"https://www.bravamarubatuba.com.br/img/logo-oficial.webp","slogan":"Aventura sobre as ondas","address":{"@type":"PostalAddress","streetAddress":"Estrada da Ribeira · Flamengo / Praias da Ribeira e Sete Fontes","addressLocality":"Ubatuba","addressRegion":"SP","postalCode":"11680-000","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-23.5059628,"longitude":-45.1160084},"hasMap":"https://www.google.com/maps/place/?q=place_id:ChIJu_g2IcAdZ40Rsn1jinAGVao","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"17:00"}],"areaServed":[{"@type":"City","name":"Ubatuba"},{"@type":"Place","name":"Saco da Ribeira, Ubatuba"},{"@type":"Place","name":"Praia do Flamengo, Ubatuba"},{"@type":"Place","name":"Praia das Sete Fontes, Ubatuba"},{"@type":"Place","name":"Ilha Anchieta, Ubatuba"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","bestRating":"5","reviewCount":"30"},"sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJu_g2IcAdZ40Rsn1jinAGVao","https://www.google.com/maps/place/BRAVAMAR+Passeios+de+lancha+em+Ubatuba/@-23.5059628,-45.1160084,17z","https://www.instagram.com/bravamar.passeiosubatuba","https://www.tiktok.com/@bravamar7","https://www.facebook.com/passeiosbravamar/"],"potentialAction":{"@type":"ReserveAction","target":"https://www.bravamarubatuba.com.br/#monte","name":"Montar passeio e reservar pelo WhatsApp"},"makesOffer":[{"@type":"Offer","itemOffered":{"@id":"https://www.bravamarubatuba.com.br/#rota-sete-fontes"}},{"@type":"Offer","itemOffered":{"@id":"https://www.bravamarubatuba.com.br/#privativo-anchieta-6h"}},{"@type":"Offer","itemOffered":{"@id":"https://www.bravamarubatuba.com.br/#panoramico-anchieta-2h"}},{"@type":"Offer","itemOffered":{"@id":"https://www.bravamarubatuba.com.br/#taxi-boat"}}],"founder":[{"@type":"Person","name":"Nicolas Anderson de Oliveira"},{"@type":"Person","name":"Gustavo"}],"identifier":{"@type":"PropertyValue","propertyID":"CADASTUR","value":"27.937.567/0001-45"},"taxID":"27.937.567/0001-45","hasCredential":{"@type":"EducationalOccupationalCredential","name":"Certificado Cadastur — Transportadora Turística","credentialCategory":"Cadastur / Ministério do Turismo","validFrom":"2025-08-11","validUntil":"2027-08-11","recognizedBy":{"@type":"GovernmentOrganization","name":"Ministério do Turismo","url":"https://cadastur.turismo.gov.br/"}}},{"@type":["TouristTrip","BoatTrip"],"@id":"https://www.bravamarubatuba.com.br/#rota-sete-fontes","name":"Rota Sete Fontes","description":"Tour panorâmico de lancha por 7 praias (Santa Rita, Lamberto, Cidade Flutuante, Ribeira, Dionísia, Flamengo e Flamenguinho, com parada para mergulho) e parada especial na Praia das Sete Fontes. Compartilhado ou exclusivo.","provider":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"touristType":"Compartilhado ou exclusivo","itinerary":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Beach","name":"Praia da Santa Rita"}},{"@type":"ListItem","position":2,"item":{"@type":"Beach","name":"Lamberto"}},{"@type":"ListItem","position":3,"item":{"@type":"Beach","name":"Cidade Flutuante"}},{"@type":"ListItem","position":4,"item":{"@type":"Beach","name":"Ribeira"}},{"@type":"ListItem","position":5,"item":{"@type":"Beach","name":"Dionísia"}},{"@type":"ListItem","position":6,"item":{"@type":"Beach","name":"Flamengo"}},{"@type":"ListItem","position":7,"item":{"@type":"Beach","name":"Flamenguinho (Peixinhos)"}},{"@type":"ListItem","position":8,"item":{"@type":"Beach","name":"Praia das Sete Fontes"}}]}},{"@type":["TouristTrip","BoatTrip"],"@id":"https://www.bravamarubatuba.com.br/#privativo-anchieta-6h","name":"Passeio Privativo – Ilha Anchieta (6 horas)","description":"Dia inteiro de passeio privativo com paradas na Pedra do Navio e nas praias do Engenho, Presídio, Sapateiro e Palmas. Almoço no quiosque da Praia das Sete Fontes ou churrasco a bordo na Praia do Flamengo.","provider":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"touristType":"Privativo","duration":"PT6H"},{"@type":["TouristTrip","BoatTrip"],"@id":"https://www.bravamarubatuba.com.br/#panoramico-anchieta-2h","name":"Passeio Panorâmico – Ilha Anchieta (2 horas)","description":"Passeio panorâmico com paradas para mergulho e fotos na Pedra do Navio e nas praias do Engenho, Sapateiro e Presídio, finalizando na Praia das Palmas.","provider":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"duration":"PT2H"},{"@type":"Service","@id":"https://www.bravamarubatuba.com.br/#taxi-boat","name":"Táxi-Boat","serviceType":"Traslado de lancha com horário marcado","description":"Levamos e buscamos com horário marcado para as praias do Lamberto, Flamengo, Sete Fontes e Ilha Anchieta.","provider":{"@id":"https://www.bravamarubatuba.com.br/#negocio"},"areaServed":["Praia do Lamberto","Praia do Flamengo","Praia das Sete Fontes","Ilha Anchieta"]},{"@type":"Product","@id":"https://www.bravamarubatuba.com.br/#lancha-bravamar","name":"Lancha BRAVAMAR","description":"Lancha para até 12 pessoas com churrasqueira, som Bluetooth, boia tipo espaguete, snorkels, coletes para nadar, ducha de água doce, cooler, kit de primeiros socorros e kit salvatagem.","brand":{"@type":"Brand","name":"BRAVAMAR"},"image":"https://www.bravamarubatuba.com.br/img/frota-12p-3.webp","additionalProperty":[{"@type":"PropertyValue","name":"Capacidade","value":"12 pessoas"}]},{"@type":"Product","@id":"https://www.bravamarubatuba.com.br/#lancha-bravamar-1","name":"Lancha BRAVAMAR 1","description":"Lancha para até 5 pessoas, usada para Táxi-Boat e pequenos roteiros.","brand":{"@type":"Brand","name":"BRAVAMAR"},"image":"https://www.bravamarubatuba.com.br/img/frota-5p-1.webp","additionalProperty":[{"@type":"PropertyValue","name":"Capacidade","value":"5 pessoas"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Onde é o embarque?","acceptedAnswer":{"@type":"Answer","text":"Estrada da Ribeira, entre o Flamengo e as praias da Ribeira e Sete Fontes, em Ubatuba. No passeio privativo à Ilha Anchieta, embarcamos na costa mais viável para você."}},{"@type":"Question","name":"Passeio compartilhado ou exclusivo?","acceptedAnswer":{"@type":"Answer","text":"A Rota Sete Fontes pode ser compartilhada ou exclusiva. O passeio à Ilha Anchieta de 6 horas é privativo."}},{"@type":"Question","name":"Dá para ter churrasco a bordo?","acceptedAnswer":{"@type":"Answer","text":"Sim. A lancha de 12 pessoas tem churrasqueira. Marque no simulador ou avise pelo WhatsApp."}},{"@type":"Question","name":"Como funciona o Táxi-Boat?","acceptedAnswer":{"@type":"Answer","text":"Levamos e buscamos com horário marcado, para Lamberto, Flamengo, Sete Fontes e Ilha Anchieta."}},{"@type":"Question","name":"Quanto custa e quais os horários?","acceptedAnswer":{"@type":"Answer","text":"Valores e horários vêm pelo WhatsApp, conforme roteiro, data e pessoas."}},{"@type":"Question","name":"A Bravamar é regularizada?","acceptedAnswer":{"@type":"Answer","text":"Sim. Cadastur do Ministério do Turismo, cadastro 27.937.567/0001-45, válido até 11/08/2027."}},{"@type":"Question","name":"Qual lancha vai no meu passeio?","acceptedAnswer":{"@type":"Answer","text":"A Lancha BRAVAMAR leva até 12 pessoas. A Lancha BRAVAMAR 1 leva até 5 e faz Táxi-Boat e pequenos roteiros."}}]}]}</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -298,7 +335,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
 
 <nav class="nav" id="nav" aria-label="Principal">
  <a class="brand" href="#topo" aria-label="BRAVAMAR — início"><img src="img/logo-oficial.webp" alt="BRAVAMAR — Aventura sobre as ondas" width="840" height="678"></a>
- <ul><li><a href="#roteiros">Roteiros</a></li><li><a href="#lancha">A Lancha</a></li><li><a href="#monte">Monte seu Passeio</a></li></ul>
+ <ul><li><a href="#roteiros">Roteiros</a></li><li><a href="#lancha">As Lanchas</a></li><li><a href="#monte">Monte seu Passeio</a></li></ul>
  <a class="btn" href="#monte">Reservar</a>
 </nav>
 
@@ -310,7 +347,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
   <div class="seal"><span class="g"><svg viewBox="0 0 48 48"><use href="#gg"/></svg></span><span class="st">★</span> 5,0 no Google <span class="n">· 30 avaliações</span></div>
   <h1><span class="a" data-split>BRAVAMAR</span> <span class="b" data-split>Passeios de lancha em Ubatuba</span></h1>
   <p class="sub lead rv" style="max-width:none;opacity:1">Aventura sobre as ondas.</p>
-  <div class="pills rv"><span><i></i>Passeio privativo</span><span><i></i>Churrasco a bordo</span><span><i></i>Saco da Ribeira · Ubatuba</span></div>
+  <div class="pills rv"><span><i></i>Compartilhado ou exclusivo</span><span><i></i>Cadastur</span><span><i></i>Saco da Ribeira · Ubatuba</span></div>
   <a class="btn wa rv" href="#" data-wa="Olá! Vi o site da BRAVAMAR e quero saber sobre o passeio de lancha em Ubatuba."><svg><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
  </div>
 </header>
@@ -320,6 +357,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
   <span class="eyebrow l rv">Ubatuba · litoral norte de SP</span>
   <h2 id="rt" data-split>Seu dia no mar, no seu ritmo.</h2>
  </div>
+ <div class="wrap"><div class="chips rtabs" id="rtabs" role="group" aria-label="Escolha o roteiro"><button type="button" aria-pressed="true" data-k="sf">Rota Sete Fontes</button><button type="button" aria-pressed="false" data-k="ps">Anchieta 6h</button><button type="button" aria-pressed="false" data-k="pa">Anchieta 2h</button><button type="button" aria-pressed="false" data-k="tb">Táxi-Boat</button></div></div>
  <div class="scene" id="scene">
   <svg id="sv" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cena animada: lancha navegando por ondas turquesa, com sol dourado e gaivotas, passando pelas paradas do roteiro em Ubatuba">
    <defs>
@@ -352,40 +390,64 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
 
 <section class="roteiros pad" id="roteiros" aria-labelledby="rr">
  <div class="wrap" style="position:relative;z-index:2">
-  <span class="eyebrow rv">Praias &amp; roteiros</span>
-  <h2 id="rr" data-split>Paradas de água calma.</h2>
-  <p class="lead rv">Toque na foto para ampliar.</p>
-  <div class="car" id="car">
-   <button class="stop rv" data-lb="img/lancha-ancorada.webp" data-cap="Saco da Ribeira · embarque"><span class="num">1</span><img src="img/lancha-ancorada.webp" alt="Lancha ancorada perto da mata e do mar calmo" width="720" height="1280" loading="lazy"><span class="t"><small>Embarque</small><b>Saco da Ribeira</b></span></button>
-   <button class="stop rv" data-lb="img/praia.webp" data-cap="Praia do Flamengo"><span class="num">2</span><img src="img/praia.webp" alt="Praia com coqueiros e mar calmo em Ubatuba" width="720" height="844" loading="lazy"><span class="t"><small>Parada</small><b>Praia do Flamengo</b></span></button>
-   <button class="stop rv" data-lb="img/agua-turquesa.webp" data-cap="Praia das Sete Fontes"><span class="num">3</span><img src="img/agua-turquesa.webp" alt="Água verde-turquesa transparente ao lado da lancha" width="720" height="844" loading="lazy"><span class="t"><small>Parada</small><b>Sete Fontes</b></span></button>
-   <button class="stop rv" data-lb="img/azul-1080.webp" data-cap="Ilha Anchieta"><span class="num">4</span><img src="img/azul-1080.webp" srcset="img/azul-640.webp 640w,img/azul-1080.webp 1080w" sizes="320px" alt="Proa da lancha com vista para as ilhas de Ubatuba" width="1080" height="1920" loading="lazy"><span class="t"><small>Parada</small><b>Ilha Anchieta</b></span></button>
-   <button class="stop rv" data-lb="img/churrasco.webp" data-cap="Churrasco a bordo"><span class="num">5</span><img src="img/churrasco.webp" alt="Churrasqueira com espetos na proa, sobre água turquesa" width="720" height="870" loading="lazy"><span class="t"><small>A bordo</small><b>Churrasco no mar</b></span></button>
+  <span class="eyebrow rv">Roteiros &amp; serviços</span>
+  <h2 id="rr" data-split>Quatro jeitos de curtir o mar.</h2>
+  <p class="lead rv">Escolha o seu e monte o passeio.</p>
+  <div class="rcards">
+   <article class="rc rv" id="rc-sf"><div class="ph"><img src="img/praia.webp" alt="Praia com coqueiros e mar calmo em Ubatuba" width="720" height="844" loading="lazy"></div><div class="bd"><span class="badge">Compartilhado ou exclusivo</span><h3>Rota Sete Fontes</h3><p class="one">Tour panorâmico por 7 praias. O marinheiro conta a história de cada uma. Tartarugas marinhas são comuns.</p><ol class="stp"><li>Praia da Santa Rita</li><li>Lamberto</li><li>Cidade Flutuante</li><li>Ribeira</li><li>Dionísia</li><li>Flamengo</li><li>Flamenguinho (Peixinhos) · parada para mergulho</li></ol><p class="sp">📍 Parada especial: Praia das Sete Fontes</p><button type="button" class="pick" data-rot="Rota Sete Fontes">Montar este passeio →</button></div></article>
+   <article class="rc rv" id="rc-ps"><div class="ph"><img src="img/azul-1080.webp" alt="Proa da lancha com vista para as ilhas de Ubatuba" width="1080" height="1920" loading="lazy"></div><div class="bd"><span class="badge">6 horas · privativo</span><h3>Privativo · Ilha Anchieta</h3><p class="one">Um dia inteiro para relaxar. Embarque na costa mais viável para você.</p><ol class="stp"><li>Pedra do Navio</li><li>Praia do Engenho</li><li>Praia do Presídio</li><li>Praia do Sapateiro</li><li>Praia das Palmas</li></ol><p class="sp">🍽️ Almoço à escolha: Sete Fontes (quiosque) ou Flamengo (churrasco a bordo). Outro local, com avaliação do marinheiro no dia.</p><button type="button" class="pick" data-rot="Privativo Ilha Anchieta · 6h">Montar este passeio →</button></div></article>
+   <article class="rc rv" id="rc-pa"><div class="ph"><img src="img/agua-turquesa.webp" alt="Água verde-turquesa transparente ao lado da lancha" width="720" height="844" loading="lazy"></div><div class="bd"><span class="badge">2 horas</span><h3>Panorâmico · Ilha Anchieta</h3><p class="one">Uma das ilhas mais renomadas de Ubatuba, com paradas para mergulho e fotos.</p><ol class="stp"><li>Pedra do Navio</li><li>Praia do Engenho</li><li>Praia do Sapateiro</li><li>Praia do Presídio</li></ol><p class="sp">📸 Finalizando na Praia das Palmas</p><button type="button" class="pick" data-rot="Panorâmico Ilha Anchieta · 2h">Montar este passeio →</button></div></article>
+   <article class="rc rv" id="rc-tb"><div class="ph"><img src="img/frota-5p-2-640.webp" alt="Lancha Bravamar 1 na praia, pronta para o táxi-boat" width="720" height="960" loading="lazy"></div><div class="bd"><span class="badge">Horário marcado</span><h3>Táxi-Boat</h3><p class="one">Traslado até as praias. Levamos e buscamos com horário marcado.</p><ol class="stp"><li>Praia do Lamberto</li><li>Praia do Flamengo</li><li>Praia das Sete Fontes</li><li>Ilha Anchieta</li></ol><button type="button" class="pick" data-rot="Táxi-Boat">Montar este passeio →</button></div></article>
   </div>
  </div>
  <div class="wv" style="color:var(--navy)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 30C180 80 320 0 520 36s400 50 560 10 260-30 360 4V80H0z"/></svg></div>
 </section>
 
+
 <section class="lancha pad" id="lancha" aria-labelledby="ll">
  <div class="wrap" style="position:relative;z-index:2">
-  <span class="eyebrow l rv">A lancha</span>
-  <h2 id="ll" data-split>Lancha nova, sem pressa.</h2>
-  <p class="lead rv">Conforto e segurança para o dia inteiro.</p>
-  <div class="duo">
-   <figure class="rv"><img data-par src="img/verde-1080.webp" srcset="img/verde-640.webp 640w,img/verde-1080.webp 1080w" sizes="50vw" alt="Água verde-esmeralda ao lado da lancha, com praia ao fundo" width="1080" height="1920" loading="lazy"></figure>
-   <figure class="rv"><img data-par src="img/azul-1080.webp" srcset="img/azul-640.webp 640w,img/azul-1080.webp 1080w" sizes="50vw" alt="Passageira na proa da lancha olhando o mar de Ubatuba" width="1080" height="1920" loading="lazy"></figure>
+  <span class="eyebrow l rv">Nossas embarcações</span>
+  <h2 id="ll" data-split>Duas lanchas, um padrão.</h2>
+  <p class="lead rv">Toque nas fotos para ampliar.</p>
+  <div class="boat rv" id="b12">
+   <div class="bh"><span class="cp">12 pessoas</span><h3>Lancha BRAVAMAR</h3></div>
+   <div class="car"><button class="stop rv" data-lb="img/frota-12p-3.webp" data-cap="Lancha BRAVAMAR ancorada"><span class="num">1</span><img src="img/frota-12p-3-640.webp" srcset="img/frota-12p-3-640.webp 640w,img/frota-12p-3.webp 1200w" sizes="320px" alt="Lancha BRAVAMAR ancorada em água turquesa, com capota escura" width="640" height="853" loading="lazy"><span class="t"><small>Lancha BRAVAMAR</small><b>Lancha BRAVAMAR ancorada</b></span></button><button class="stop rv" data-lb="img/frota-12p-1.webp" data-cap="Convés e capota"><span class="num">2</span><img src="img/frota-12p-1-640.webp" srcset="img/frota-12p-1-640.webp 640w,img/frota-12p-1.webp 1200w" sizes="320px" alt="Convés da lancha BRAVAMAR com bancos claros e capota escura" width="640" height="853" loading="lazy"><span class="t"><small>Lancha BRAVAMAR</small><b>Convés e capota</b></span></button><button class="stop rv" data-lb="img/frota-12p-2.webp" data-cap="Painel e comando"><span class="num">3</span><img src="img/frota-12p-2-640.webp" srcset="img/frota-12p-2-640.webp 640w,img/frota-12p-2.webp 1200w" sizes="320px" alt="Painel e volante da lancha BRAVAMAR com vista para o mar" width="640" height="853" loading="lazy"><span class="t"><small>Lancha BRAVAMAR</small><b>Painel e comando</b></span></button><button class="stop rv" data-lb="img/frota-12p-4.webp" data-cap="Popa e motor"><span class="num">4</span><img src="img/frota-12p-4-640.webp" srcset="img/frota-12p-4-640.webp 640w,img/frota-12p-4.webp 1200w" sizes="320px" alt="Popa da lancha BRAVAMAR com motor e bancos em L" width="640" height="853" loading="lazy"><span class="t"><small>Lancha BRAVAMAR</small><b>Popa e motor</b></span></button><button class="stop rv" data-lb="img/frota-12p-5.webp" data-cap="Bancos e boias"><span class="num">5</span><img src="img/frota-12p-5-640.webp" srcset="img/frota-12p-5-640.webp 640w,img/frota-12p-5.webp 1200w" sizes="320px" alt="Bancos da lancha BRAVAMAR e boias tipo espaguete" width="640" height="853" loading="lazy"><span class="t"><small>Lancha BRAVAMAR</small><b>Bancos e boias</b></span></button></div>
+   <div class="feats"><div class="feat rv"><svg viewBox="0 0 32 32"><circle cx="11" cy="10" r="4"/><circle cx="22" cy="11" r="3.4"/><path d="M3 26c0-5 3.6-8 8-8s8 3 8 8M19 20c1-.7 2-1 3-1 4 0 7 2.6 7 7"/></svg>12 pessoas</div><div class="feat rv"><svg viewBox="0 0 32 32"><path d="M5 11h22a11 11 0 0 1-22 0zM10 28h12M16 22v6M11 4c-1 2 1 3 0 5M16 4c-1 2 1 3 0 5M21 4c-1 2 1 3 0 5"/></svg>Churrasqueira</div><div class="feat rv"><svg viewBox="0 0 32 32"><rect x="9" y="4" width="14" height="24" rx="4"/><circle cx="16" cy="19" r="4"/><circle cx="16" cy="9.5" r="1.2"/></svg>Som com Bluetooth</div><div class="feat rv"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="4.5"/><path d="M8 8l5 5M24 8l-5 5M8 24l5-5M24 24l-5-5"/></svg>Boia tipo espaguete</div><div class="feat rv"><svg viewBox="0 0 32 32"><rect x="4" y="9" width="24" height="13" rx="6"/><circle cx="11" cy="15.5" r="3"/><circle cx="21" cy="15.5" r="3"/></svg>Snorkels para mergulho</div><div class="feat rv"><svg viewBox="0 0 32 32"><path d="M10 4l6 4 6-4 3 5v18H7V9zM16 8v19"/></svg>Colete para nadar</div><div class="feat rv"><svg viewBox="0 0 32 32"><path d="M16 4c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15z"/></svg>Ducha de água doce</div><div class="feat rv"><svg viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="3"/><path d="M4 15h24M12 10V7h8v3M16 19v3"/></svg>Cooler</div><div class="feat rv"><svg viewBox="0 0 32 32"><rect x="4" y="9" width="24" height="18" rx="3"/><path d="M16 13v10M11 18h10M12 9V6h8v3"/></svg>Kit primeiros socorros</div><div class="feat rv"><svg viewBox="0 0 32 32"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7zM11 16l4 4 7-8"/></svg>Kit salvatagem</div></div>
   </div>
-  <div class="feats">
-   <div class="feat rv"><svg viewBox="0 0 32 32"><path d="M16 3l2.6 6.4L25 12l-6.4 2.6L16 21l-2.6-6.4L7 12l6.4-2.6zM25 21l1.2 3 3 1.2-3 1.2L25 29l-1.2-3.6-3-1.2 3-1.2z"/></svg>Lancha nova</div>
-   <div class="feat rv"><svg viewBox="0 0 32 32"><path d="M5 11h22a11 11 0 0 1-22 0zM10 28h12M16 22v6M11 4c-1 2 1 3 0 5M16 4c-1 2 1 3 0 5M21 4c-1 2 1 3 0 5"/></svg>Churrasco a bordo</div>
-   <div class="feat rv"><svg viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="3"/><path d="M4 15h24M12 10V7h8v3M16 19v3"/></svg>Cooler</div>
-   <div class="feat rv"><svg viewBox="0 0 32 32"><rect x="9" y="4" width="14" height="24" rx="4"/><circle cx="16" cy="19" r="4"/><circle cx="16" cy="9.5" r="1.2"/></svg>Som Bluetooth</div>
-   <div class="feat rv"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="4.5"/><path d="M8 8l5 5M24 8l-5 5M8 24l5-5M24 24l-5-5"/></svg>Flutuadores</div>
-   <div class="feat rv"><svg viewBox="0 0 32 32"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7zM11 16l4 4 7-8"/></svg>Itens de segurança</div>
+  <div class="boat rv" id="b5">
+   <div class="bh"><span class="cp">5 pessoas</span><h3>Lancha BRAVAMAR 1</h3><p>Usada para Táxi-Boat e pequenos roteiros.</p></div>
+   <div class="car"><button class="stop rv" data-lb="img/frota-5p-1.webp" data-cap="Lancha BRAVAMAR 1 ancorada"><span class="num">1</span><img src="img/frota-5p-1-640.webp" srcset="img/frota-5p-1-640.webp 640w,img/frota-5p-1.webp 1440w" sizes="320px" alt="Lancha BRAVAMAR 1 com capota, ancorada em água calma" width="720" height="960" loading="lazy"><span class="t"><small>Lancha BRAVAMAR 1</small><b>Lancha BRAVAMAR 1 ancorada</b></span></button><button class="stop rv" data-lb="img/frota-5p-2.webp" data-cap="Lancha BRAVAMAR 1 na praia"><span class="num">2</span><img src="img/frota-5p-2-640.webp" srcset="img/frota-5p-2-640.webp 640w,img/frota-5p-2.webp 1440w" sizes="320px" alt="Lancha BRAVAMAR 1 na beira da praia" width="720" height="960" loading="lazy"><span class="t"><small>Lancha BRAVAMAR 1</small><b>Lancha BRAVAMAR 1 na praia</b></span></button></div>
+   <div class="feats"><div class="feat rv"><svg viewBox="0 0 32 32"><circle cx="11" cy="10" r="4"/><circle cx="22" cy="11" r="3.4"/><path d="M3 26c0-5 3.6-8 8-8s8 3 8 8M19 20c1-.7 2-1 3-1 4 0 7 2.6 7 7"/></svg>5 pessoas</div><div class="feat rv"><svg viewBox="0 0 32 32"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7zM11 16l4 4 7-8"/></svg>Táxi-Boat</div><div class="feat rv"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="4.5"/><path d="M8 8l5 5M24 8l-5 5M8 24l5-5M24 24l-5-5"/></svg>Pequenos roteiros</div></div>
   </div>
-  <div class="crew rv"><b>Nicolas</b><span>Comandante citado nas avaliações. Atenção do começo ao fim.</span></div>
  </div>
- <div class="wv" style="color:var(--teal-d)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 40C200 0 340 80 560 40s360-40 560 0 240 20 320 0V80H0z"/></svg></div>
+ <div class="wv" style="color:var(--sand)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 40C200 0 340 80 560 40s360-40 560 0 240 20 320 0V80H0z"/></svg></div>
+</section>
+
+<section class="sobre pad" id="sobre" aria-labelledby="sb">
+ <div class="wrap cols" style="position:relative;z-index:2">
+  <div>
+   <span class="eyebrow rv">Família caiçara · Nicolas e Gustavo</span>
+   <h2 id="sb" data-split>Viva a Experiência Bravamar!</h2>
+   <p class="sbp rv">A Bravamar é uma empresa familiar caiçara, nascida do amor pelo mar e pela nossa querida Ubatuba.</p>
+   <p class="sbp rv">Somos Nicolas e Gustavo, caiçaras, nascidos e criados nesta terra de praias paradisíacas, ilhas e belezas naturais. Conhecemos de perto os encantos do nosso litoral e temos o prazer de compartilhar tudo isso com você!</p>
+   <p class="sbp rv">Embarque com a gente em uma aventura inesquecível e descubra Ubatuba de um jeito diferente. Explore praias paradisíacas, mergulhe em águas cristalinas e aproveite paradas especiais para relaxar, tirar fotos e viver momentos únicos com sua família e amigos.</p>
+   <h3 class="sbh rv">O que oferecemos</h3>
+   <ul class="sbl rv"><li>Passeios de lancha pelos encantos do nosso litoral</li><li>Paradas estratégicas em praias e lugares paradisíacos</li><li>Desembarques para banho, contemplação e fotos</li><li>Experiências para toda a família, com segurança, carinho e hospitalidade</li></ul>
+   <p class="sbq rv">“Mais do que passeios, proporcionamos experiências e momentos que ficam na memória. Viva o mar, viva a aventura… Viva a Experiência Bravamar!”</p>
+  </div>
+  <div class="cad rv">
+   <span class="seal2">✓ Empresa regularizada · Ministério do Turismo</span>
+   <button type="button" class="cadimg" data-lb="img/cadastur-certificado.webp" data-cap="Certificado Cadastur · Transportadora Turística · 27.937.567/0001-45"><img src="img/cadastur-certificado.webp" alt="Certificado Cadastur da Bravamar: Transportadora Turística, cadastro 27.937.567/0001-45, validade 11/08/2025 a 11/08/2027" width="1988" height="1406" loading="lazy"><span>Toque para ampliar</span></button>
+   <dl>
+    <div><dt>Atividade</dt><dd>Transportadora Turística</dd></div>
+    <div><dt>Prestador</dt><dd>27.937.567 Nicolas Anderson de Oliveira</dd></div>
+    <div><dt>Cadastur · CNPJ</dt><dd>27.937.567/0001-45</dd></div>
+    <div><dt>Validade</dt><dd>11/08/2025 a 11/08/2027</dd></div>
+   </dl>
+   <a class="btn mp" href="https://cadastur.turismo.gov.br/" target="_blank" rel="noopener">Conferir no Cadastur</a>
+  </div>
+ </div>
+ <div class="wv" style="color:var(--teal-d)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 36C220 80 360 0 580 38s360 44 540 4 240-24 320-6V80H0z"/></svg></div>
 </section>
 
 <section class="momentos pad" id="momentos" aria-labelledby="mm">
@@ -428,12 +490,14 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
   <h2 id="mp" data-split>Monte seu passeio.</h2>
   <p class="lead rv">Escolha e envie. A resposta vem pelo WhatsApp.</p>
   <div class="box">
-   <div class="fld full rv"><span class="lbl">Roteiro</span><div class="chips" id="rot" role="group" aria-label="Roteiro"><button type="button" aria-pressed="true">Roteiro completo</button><button type="button" aria-pressed="false">Sete Fontes e Flamengo</button><button type="button" aria-pressed="false">Ilha Anchieta</button><button type="button" aria-pressed="false">Quero sugestões</button></div></div>
+   <div class="fld full rv"><span class="lbl">Roteiro</span><div class="chips" id="rot" role="group" aria-label="Roteiro"><button type="button" aria-pressed="true">Rota Sete Fontes</button><button type="button" aria-pressed="false">Privativo Ilha Anchieta · 6h</button><button type="button" aria-pressed="false">Panorâmico Ilha Anchieta · 2h</button><button type="button" aria-pressed="false">Táxi-Boat</button></div></div>
+   <div class="fld full rv"><span class="lbl">Embarcação</span><div class="chips" id="bt" role="group" aria-label="Embarcação"><button type="button" aria-pressed="true">Lancha Bravamar · até 12 pessoas</button><button type="button" aria-pressed="false">Lancha Bravamar 1 · até 5 pessoas</button></div></div>
    <div class="fld rv"><label for="dt">Data desejada</label><input type="date" id="dt"></div>
    <div class="fld rv"><span class="lbl">Churrasco a bordo</span><button type="button" class="tg" id="bbq" aria-pressed="false">Incluir no passeio<i></i></button></div>
    <div class="fld rv"><span class="lbl">Adultos</span><div class="ctr"><button type="button" data-k="ad" data-d="-1" aria-label="Menos adultos">−</button><output id="ad">2</output><button type="button" data-k="ad" data-d="1" aria-label="Mais adultos">+</button></div></div>
    <div class="fld rv"><span class="lbl">Crianças</span><div class="ctr"><button type="button" data-k="cr" data-d="-1" aria-label="Menos crianças">−</button><output id="cr">0</output><button type="button" data-k="cr" data-d="1" aria-label="Mais crianças">+</button></div></div>
    <div class="fld full rv"><span class="lbl">Ocasião</span><div class="chips" id="oc" role="group" aria-label="Ocasião"><button type="button" aria-pressed="true">Passeio em família</button><button type="button" aria-pressed="false">Com amigos</button><button type="button" aria-pressed="false">Aniversário</button><button type="button" aria-pressed="false">Outra</button></div></div>
+   <div class="full rv"><small class="capn" id="capn">Capacidade: até 12 pessoas.</small></div>
    <div class="full rv"><div class="bubble" id="msg" aria-live="polite"></div></div>
    <div class="full rv"><a class="btn wa" id="send" href="#"><svg><use href="#wa"/></svg>Enviar pelo WhatsApp</a></div>
   </div>
@@ -446,11 +510,13 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
   <span class="eyebrow rv">Dúvidas</span>
   <h2 id="fq" data-split>Perguntas frequentes.</h2>
   <div style="margin-top:20px">
-   <div class="q rv"><button type="button" aria-expanded="false">Onde é o embarque?<i></i></button><div class="a"><p>Estrada da Ribeira, entre o Flamengo e as praias da Ribeira e Sete Fontes, em Ubatuba.</p></div></div>
-   <div class="q rv"><button type="button" aria-expanded="false">Dá para ter churrasco a bordo?<i></i></button><div class="a"><p>Sim. Marque no simulador ou avise pelo WhatsApp.</p></div></div>
+   <div class="q rv"><button type="button" aria-expanded="false">Onde é o embarque?<i></i></button><div class="a"><p>Estrada da Ribeira, entre o Flamengo e as praias da Ribeira e Sete Fontes, em Ubatuba. No passeio privativo à Ilha Anchieta, embarcamos na costa mais viável para você.</p></div></div>
+   <div class="q rv"><button type="button" aria-expanded="false">Passeio compartilhado ou exclusivo?<i></i></button><div class="a"><p>A Rota Sete Fontes pode ser compartilhada ou exclusiva. O passeio à Ilha Anchieta de 6 horas é privativo.</p></div></div>
+   <div class="q rv"><button type="button" aria-expanded="false">Dá para ter churrasco a bordo?<i></i></button><div class="a"><p>Sim. A lancha de 12 pessoas tem churrasqueira. Marque no simulador ou avise pelo WhatsApp.</p></div></div>
+   <div class="q rv"><button type="button" aria-expanded="false">Como funciona o Táxi-Boat?<i></i></button><div class="a"><p>Levamos e buscamos com horário marcado, para Lamberto, Flamengo, Sete Fontes e Ilha Anchieta.</p></div></div>
    <div class="q rv"><button type="button" aria-expanded="false">Quanto custa e quais os horários?<i></i></button><div class="a"><p>Valores e horários vêm pelo WhatsApp, conforme roteiro, data e pessoas.</p></div></div>
-   <div class="q rv"><button type="button" aria-expanded="false">A lancha é segura?<i></i></button><div class="a"><p>Clientes contam que ela é nova e tem itens de segurança e conforto.</p></div></div>
-   <div class="q rv"><button type="button" aria-expanded="false">Posso levar crianças?<i></i></button><div class="a"><p>Informe adultos e crianças no simulador. A equipe confirma pelo WhatsApp.</p></div></div>
+   <div class="q rv"><button type="button" aria-expanded="false">A Bravamar é regularizada?<i></i></button><div class="a"><p>Sim. Cadastur do Ministério do Turismo, cadastro 27.937.567/0001-45, válido até 11/08/2027.</p></div></div>
+   <div class="q rv"><button type="button" aria-expanded="false">Qual lancha vai no meu passeio?<i></i></button><div class="a"><p>A Lancha BRAVAMAR leva até 12 pessoas. A Lancha BRAVAMAR 1 leva até 5 e faz Táxi-Boat e pequenos roteiros.</p></div></div>
   </div>
  </div>
  <div class="wv" style="color:var(--sand2)"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 40C220 76 360 4 580 40s360 40 540 0 240-20 320 0V80H0z"/></svg></div>
@@ -476,7 +542,7 @@ footer small{display:block;margin-top:30px;opacity:.55;font-size:12px}
   <p>BRAVAMAR Passeios de lancha em Ubatuba · Estrada da Ribeira, Flamengo · SP</p>
   <a class="btn wa" href="#" data-wa="Olá! Vi o site da BRAVAMAR e quero saber sobre o passeio de lancha em Ubatuba."><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
   <div class="links"><a href="https://www.instagram.com/bravamar.passeiosubatuba" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@bravamar7" target="_blank" rel="noopener">TikTok</a><a href="https://www.google.com/maps/place/BRAVAMAR+Passeios+de+lancha+em+Ubatuba/@-23.5059628,-45.1160084,17z" target="_blank" rel="noopener">Google Maps</a></div>
-  <small>© BRAVAMAR · (12) 99207-9031</small>
+  <small>© BRAVAMAR · Cadastur 27.937.567/0001-45 · (12) 99207-9031</small>
  </div>
 </footer>
 
@@ -504,12 +570,22 @@ function wavePath(y,amp,len,reps){var d='M0 '+y;for(var k=0;k<reps;k++)d+='q'+le
   var pth=el('path',{d:wavePath(p[0],p[1],p[2],Math.ceil(2200/p[2])*2+2)+'V440H0z',fill:ix?(n==2?'#0F7A87':'#1695A3'):'#23B5C6',opacity:ix?(.9-n*.12):.5},g);pth.setAttribute('transform','translate('+(-n*70)+' 0)')})});
 /* ---------- rota ---------- */
 var trail=$('#trail'),TL=trail.getTotalLength();trail.style.strokeDasharray='2 12';
-var stopNames=['Saco da Ribeira','Praia do Flamengo','Sete Fontes','Ilha Anchieta','Churrasco a bordo'],stopF=[0,.27,.52,.77,1],stopsG=$('#stopsG'),dots=[];
-stopF.forEach(function(f){var pt=trail.getPointAtLength(TL*f);var g=el('g',{transform:'translate('+pt.x+' '+pt.y+')'},stopsG);el('circle',{r:13,fill:'rgba(242,180,65,.22)'},g);var c=el('circle',{r:6,fill:'#041B2E',stroke:'#F2B441','stroke-width':3},g);dots.push(c)});
-var boat=$('#boatG'),boatB=$('#boatB'),capT=$('#capT'),sv=$('#sv'),scene=$('#scene');
-var cur=-1;
+var ROUTES={
+ sf:{n:'Rota Sete Fontes',s:['Saco da Ribeira','Praia da Santa Rita','Lamberto','Cidade Flutuante','Ribeira','Dionísia','Flamengo','Flamenguinho · mergulho','Sete Fontes']},
+ ps:{n:'Privativo Ilha Anchieta · 6h',s:['Embarque','Pedra do Navio','Praia do Engenho','Praia do Presídio','Praia do Sapateiro','Praia das Palmas','Almoço à escolha']},
+ pa:{n:'Panorâmico Ilha Anchieta · 2h',s:['Embarque','Pedra do Navio','Praia do Engenho','Praia do Sapateiro','Praia do Presídio','Praia das Palmas']},
+ tb:{n:'Táxi-Boat',s:['Embarque','Praia do Lamberto','Praia do Flamengo','Praia das Sete Fontes','Ilha Anchieta']}
+};
+var stopNames=[],stopF=[],stopsG=$('#stopsG'),dots=[],curP=0,cur=-1;
+function setRoute(k){var R=ROUTES[k];stopNames=R.s;stopF=R.s.map(function(_,i){return i/(R.s.length-1)});
+ while(stopsG.firstChild)stopsG.removeChild(stopsG.firstChild);dots=[];
+ stopF.forEach(function(f){var pt=trail.getPointAtLength(TL*f);var g=el('g',{transform:'translate('+pt.x+' '+pt.y+')'},stopsG);el('circle',{r:13,fill:'rgba(242,180,65,.22)'},g);var c=el('circle',{r:6,fill:'#041B2E',stroke:'#F2B441','stroke-width':3},g);dots.push(c)});
+ cur=-1;document.querySelectorAll('#rtabs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.k===k)});
+ if(typeof place==='function'&&boat)place(curP)}
+var boat=null;
+boat=$('#boatG');var boatB=$('#boatB'),capT=$('#capT'),sv=$('#sv'),scene=$('#scene');
 function place(p){
- var L=TL*p,pt=trail.getPointAtLength(L),pt2=trail.getPointAtLength(Math.min(TL,L+4));
+ curP=p;var L=TL*p,pt=trail.getPointAtLength(L),pt2=trail.getPointAtLength(Math.min(TL,L+4));
  var ang=Math.max(-9,Math.min(9,Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI));
  boat.setAttribute('transform','translate('+pt.x+' '+pt.y+') rotate('+ang+')');
  trail.style.strokeDashoffset=0;trail.setAttribute('stroke-dasharray','2 12');
@@ -527,7 +603,8 @@ var camX=0;
 function camera(x){if(vbW>=1199){sv.setAttribute('viewBox','0 0 1200 420');return}
  var vx=Math.max(0,Math.min(1200-vbW,x-vbW*.5));sv.setAttribute('viewBox',vx.toFixed(1)+' 0 '+vbW.toFixed(1)+' 420');
  var cap=$('.scene-cap');}
-size();
+size();setRoute('sf');
+document.querySelectorAll('#rtabs button').forEach(function(b){b.addEventListener('click',function(){setRoute(b.dataset.k)})});
 /* ---------- GSAP ---------- */
 function splitWords(e){var t=e.textContent.trim().split(/\s+/);e.textContent='';t.forEach(function(w,i){var m=document.createElement('span');m.className='wm';var s=document.createElement('span');s.className='wi';s.textContent=w;m.appendChild(s);e.appendChild(m);if(i<t.length-1)e.appendChild(document.createTextNode(' '))})}
 document.querySelectorAll('[data-split]').forEach(splitWords);
@@ -588,19 +665,22 @@ var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{
 document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentNode,a=$('.a',q),o=q.classList.toggle('open');b.setAttribute('aria-expanded',o);
  if(window.gsap&&!reduce)gsap.to(a,{height:o?'auto':0,duration:.5,ease:'power3.out',onComplete:function(){ScrollTrigger.refresh()}});else a.style.height=o?'auto':0})});
 /* ---------- simulador ---------- */
-var S={rot:'Roteiro completo',oc:'Passeio em família',ad:2,cr:0,bbq:false};
+var S={rot:'Rota Sete Fontes',bt:'Lancha Bravamar · até 12 pessoas',oc:'Passeio em família',ad:2,cr:0,bbq:false};
+function capac(){return S.bt.indexOf('até 5')>-1?5:12}
 function chips(id,key){document.querySelectorAll('#'+id+' button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#'+id+' button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');S[key]=b.textContent;up()})})}
-chips('rot','rot');chips('oc','oc');
-document.querySelectorAll('.ctr button').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.k;S[k]=Math.max(k=='ad'?1:0,Math.min(30,S[k]+ +b.dataset.d));$('#'+k).textContent=S[k];up()})});
+chips('rot','rot');chips('oc','oc');chips('bt','bt');
+document.querySelectorAll('#bt button').forEach(function(b){b.addEventListener('click',function(){var m=capac();while(S.ad+S.cr>m){if(S.cr>0)S.cr--;else S.ad--}$('#ad').textContent=S.ad;$('#cr').textContent=S.cr;$('#capn').textContent='Capacidade: até '+m+' pessoas.';up()})});
+document.querySelectorAll('.ctr button').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.k;var nv=Math.max(k=='ad'?1:0,Math.min(30,S[k]+ +b.dataset.d));var o=S[k];S[k]=nv;if(S.ad+S.cr>capac()){S[k]=o;$('#capn').textContent='Capacidade máxima desta lancha: '+capac()+' pessoas.'}else{$('#capn').textContent='Capacidade: até '+capac()+' pessoas.'}$('#'+k).textContent=S[k];up()})});
 $('#bbq').addEventListener('click',function(){S.bbq=!S.bbq;this.setAttribute('aria-pressed',S.bbq);up()});
 var dt=$('#dt');var t=new Date();dt.min=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);dt.addEventListener('input',up);
 function up(){var d=dt.value?dt.value.split('-').reverse().join('/'):'a combinar';
  var p=S.ad+(S.ad>1?' adultos':' adulto')+(S.cr?' e '+S.cr+(S.cr>1?' crianças':' criança'):'');
- var m='Olá! Vi o site da '+NOME+' e quero montar meu passeio:\n• Roteiro: '+S.rot+'\n• Data: '+d+'\n• Pessoas: '+p+'\n• Churrasco a bordo: '+(S.bbq?'sim':'não')+'\n• Ocasião: '+S.oc+'\nPode me passar horários e valores?';
+ var m='Olá! Vi o site da '+NOME+' e quero montar meu passeio:\n• Roteiro: '+S.rot+'\n• Embarcação: '+S.bt+'\n• Data: '+d+'\n• Pessoas: '+p+'\n• Churrasco a bordo: '+(S.bbq?'sim':'não')+'\n• Ocasião: '+S.oc+'\nPode me passar horários e valores?';
  $('#msg').textContent=m;$('#send').href=wa(m)}
+document.querySelectorAll('.pick').forEach(function(p){p.addEventListener('click',function(){var t=p.dataset.rot;document.querySelectorAll('#rot button').forEach(function(x){var on=x.textContent===t;x.setAttribute('aria-pressed',on);if(on)S.rot=t});up();var m=$('#monte');if(m)m.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})})});
 up();
 /* ---------- WebMCP ---------- */
-try{if(navigator.modelContext&&navigator.modelContext.registerTool){navigator.modelContext.registerTool({name:'reservar_passeio_bravamar',description:'Abre o WhatsApp da BRAVAMAR Passeios de lancha em Ubatuba com a mensagem de reserva.',inputSchema:{type:'object',properties:{mensagem:{type:'string'}}},execute:function(a){var u=wa((a&&a.mensagem)||'Olá! Quero reservar um passeio de lancha em Ubatuba.');return {content:[{type:'text',text:u}]}}})}}catch(e){}
+try{if(navigator.modelContext&&navigator.modelContext.registerTool){navigator.modelContext.registerTool({name:'reservar_passeio_bravamar',description:'Abre o WhatsApp da BRAVAMAR Passeios de lancha em Ubatuba com a mensagem de reserva.',inputSchema:{type:'object',properties:{mensagem:{type:'string'},roteiro:{type:'string',enum:['Rota Sete Fontes','Privativo Ilha Anchieta · 6h','Panorâmico Ilha Anchieta · 2h','Táxi-Boat']},embarcacao:{type:'string',enum:['Lancha Bravamar · até 12 pessoas','Lancha Bravamar 1 · até 5 pessoas']}}},execute:function(a){var u=wa((a&&a.mensagem)||'Olá! Quero reservar um passeio de lancha em Ubatuba.');return {content:[{type:'text',text:u}]}}})}}catch(e){}
 })();
 </script>
 </body>

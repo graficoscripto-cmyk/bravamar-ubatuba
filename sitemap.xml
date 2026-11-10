@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://bravamar-ubatuba.vercel.app/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.bravamarubatuba.com.br/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.bravamarubatuba.com.br/img/og-bravamar-v2.jpg</image:loc>
+      <image:title>BRAVAMAR Passeios de lancha em Ubatuba</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bravamarubatuba.com.br/img/hero-1180.webp</image:loc>
+      <image:title>Lancha BRAVAMAR em águas turquesa de Ubatuba</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.bravamarubatuba.com.br/img/churrasco.webp</image:loc>
+      <image:title>Churrasco a bordo na lancha BRAVAMAR em Ubatuba</image:title>
+    </image:image>
+  </url>
+</urlset>
